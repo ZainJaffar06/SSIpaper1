@@ -1,0 +1,13 @@
+seed,probe,cnn_minus_probe,p
+20260807,pod_only,0.1121,0.25
+20260807,acquisition,0.1026,0.094
+20260807,behavior_past_only,0.1054,0.184
+20260807,acq+beh+pod,0.0363,0.508
+42,pod_only,0.0103,0.924
+42,acquisition,0.0008,0.974
+42,behavior_past_only,0.0036,0.974
+42,acq+beh+pod,-0.0655,0.322
+7,pod_only,0.0792,0.366
+7,acquisition,0.0697,0.248
+7,behavior_past_only,0.0725,0.342
+7,acq+beh+pod,0.0034,0.984

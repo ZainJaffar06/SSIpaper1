@@ -1,0 +1,3 @@
+condition,image_auroc,patient_auroc
+sham_wound_only,0.7254,0.8168
+sham_background_only,0.7202,0.6541

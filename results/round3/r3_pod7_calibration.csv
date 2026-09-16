@@ -1,0 +1,5 @@
+metric,value,lo,hi
+patient_auroc(raw),0.7607,0.6501,0.8596
+brier(platt),0.0748,0.047,0.1055
+cal_slope(platt),0.6319,0.3003,1.0525
+cal_intercept(platt),-0.855,-1.9914,0.3103

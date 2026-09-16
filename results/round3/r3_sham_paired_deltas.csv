@@ -1,0 +1,6 @@
+contrast,delta,lo,hi,p
+sham_wound_only_minus_background_only,-0.0045,-0.1343,0.1249,0.938
+sham_wound_only_minus_wound_only,0.1469,-0.0171,0.3122,0.077
+sham_background_only_minus_full_image,-0.0706,-0.1764,0.0234,0.16
+background_only_minus_full_image,0.0965,-0.0121,0.2242,0.092
+wound_only_minus_full_image,-0.0549,-0.2744,0.1566,0.617

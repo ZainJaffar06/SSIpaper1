@@ -1,0 +1,4 @@
+contrast,delta_auroc,lo,hi,p_two_sided
+combined_minus_clinical_intraop,0.1161,0.0242,0.2254,0.013
+combined_minus_image,0.0382,-0.048,0.1253,0.403
+image_minus_clinical_intraop,0.0779,-0.0905,0.2451,0.386

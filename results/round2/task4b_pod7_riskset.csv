@@ -1,0 +1,5 @@
+model,n_pts,n_events,auroc,auroc_lo,auroc_hi,auprc,auprc_lo,auprc_hi
+clinical_intraop,193,15,0.6663,0.4831,0.826,0.2258,0.0958,0.4816
+image_throughPOD7,193,15,0.7607,0.6497,0.8611,0.1715,0.0922,0.3193
+combined,193,15,0.7412,0.5878,0.8719,0.2772,0.1175,0.5425
+"paired combined_vs_image: dAUROC -0.0195 (-0.1594,0.1052) p=0.804 | dAUPRC 0.1057 (-0.0374,0.3119) p=0.18",193,15,,,,,,

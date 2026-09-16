@@ -1,0 +1,2 @@
+frame,clinical_auroc,clinical_auprc,image_auprc,combined_auroc,combined_auprc,comb_vs_img_dAUROC,dAUROC_lo,dAUROC_hi,dAUROC_p,comb_vs_img_dAUPRC,dAUPRC_lo,dAUPRC_hi,dAUPRC_p,n_boot
+POD7_riskset_rangechecked,0.7397,0.3508,0.1715,0.764,0.3465,0.0034,-0.1188,0.1176,0.9446,0.175,-0.0193,0.3615,0.085,20000

@@ -1,0 +1,4 @@
+subset,n_images,n_patients,n_pos,prevalence,patient_auroc,lo,hi
+PRIMARY: locked curated smartphone,1948,210,20,0.0952,0.7792,0.6761,0.8643
+sensitivity: expanded/uncurated smartphone,3739,228,20,0.0877,0.6906,0.5701,0.8035
+context only (NOT Paper 1): smartphone+thermal patients,3358,221,23,0.1041,0.6803,0.5665,0.7877

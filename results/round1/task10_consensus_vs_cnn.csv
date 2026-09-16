@@ -1,0 +1,4 @@
+model,n_img,n_pos_img,auroc,lo,hi,auprc,note
+clinician_consensus (frac of 15 voting infected),277,14,0.6103,0.4746,0.7502,0.2396,
+"CNN (locked OOF, mean per pid-day)",277,14,0.8685,0.7278,0.9609,0.2373,
+paired delta CNN minus consensus (clustered),277,14,0.2583,0.0067,0.4641,,p=0.0442

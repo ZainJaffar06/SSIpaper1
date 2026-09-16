@@ -1,0 +1,2 @@
+n_images,median_iou,mean_iou,p90_iou,max_iou,frac_iou_lt_0_05,frac_iou_lt_0_20,median_overlap_frac_of_true
+1886,0.0,0.0026,0.0,0.2166,0.9814,0.9984,0.0

@@ -1,0 +1,5 @@
+arm,n_rows,n_pts,status,fold_sizes,analytic_note
+ssi_smartphone,1979,210,VERIFIED exact,317;341;472;432;417,"n_rows=1979 is the locked TRAINING frame incl. 30 within-patient duplicate paths (31 extra rows; never cross folds/patients - verified). Analytic count = 1948 unique images = MASTER_map_1948_seed42.csv, which supersedes this row as the auditable record."
+ssi_both,3401,221,VERIFIED exact,775;614;586;658;768,
+ssi_smartphone_expanded,3739,228,VERIFIED exact,784;708;789;812;646,
+stage_smartphone,881,200,VERIFIED exact,139;167;161;184;230,

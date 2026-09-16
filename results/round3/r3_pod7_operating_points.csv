@@ -1,0 +1,5 @@
+rule,threshold,sensitivity,flag_rate,sens_lo,sens_hi,specificity
+spec 0.80,0.2224,0.667,0.238,0.4,0.9,0.798
+spec 0.90,0.4708,0.267,0.114,0.053,0.5,0.899
+rule-out sens 14/15 (0.93),0.028,0.933,0.508,0.778,1.0,0.528
+rule-out sens 15/15 (1.00),0.0087,1.0,0.772,0.778,1.0,0.258

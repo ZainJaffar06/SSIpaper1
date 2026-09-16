@@ -1,0 +1,4 @@
+contrast,d_auroc,auroc_lo,auroc_hi,auroc_p,d_auprc,auprc_lo,auprc_hi,auprc_p
+combined_vs_image,0.0382,-0.0541,0.1253,0.371,0.1024,-0.0256,0.2688,0.115
+combined_vs_clinical,0.1161,0.018,0.219,0.018,0.0382,-0.0312,0.1008,0.228
+image_vs_clinical,0.0779,-0.0886,0.2497,0.348,-0.0642,-0.2523,0.0945,0.442

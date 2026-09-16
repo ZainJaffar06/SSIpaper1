@@ -1,0 +1,4 @@
+model,auroc,lo,hi,auprc,n_img,n_pos_img,n_pos_PATIENTS,note
+clinician_consensus,0.6103,0.4746,0.7502,0.2396,277,14,5,
+CNN_locked,0.8685,0.7278,0.9609,0.2373,277,14,5,
+paired_delta_CNN_minus_consensus,0.2583,0.0067,0.4641,,277,14,5,p=0.0442; SUPPLEMENT-GRADE: only 5 SSI+ patients in the paired cohort

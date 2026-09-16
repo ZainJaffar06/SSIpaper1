@@ -1,0 +1,2 @@
+n_images,n_raters,fleiss_kappa,Pbar,Pe,mean_image_agreement,infected_vote_fraction
+468,15,0.1054,0.6865,0.6496,0.7983,0.2265

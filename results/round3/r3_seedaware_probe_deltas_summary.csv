@@ -1,0 +1,5 @@
+probe,mean,std,min,max
+acq+beh+pod,-0.0086,0.052,-0.0655,0.0363
+acquisition,0.0577,0.052,0.0008,0.1026
+behavior_past_only,0.0605,0.052,0.0036,0.1054
+pod_only,0.0672,0.052,0.0103,0.1121

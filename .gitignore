@@ -1,0 +1,19 @@
+# Never commit patient images, raw clinical extracts, model weights, or local caches
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.heic
+*.HEIC
+*.npy
+*.pt
+*.pth
+base/
+clinical_extract/
+rater_data/
+out/
+OFFLINE_*
+logs_*.txt
+__pycache__/
+.DS_Store
+node_modules/

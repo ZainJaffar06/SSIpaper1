@@ -1,0 +1,6 @@
+model,n_pts,n_pos,patient_auroc,lo,hi,auprc
+clinical_intraop_only_PRIMARY(210pts),210,20,0.7013,0.5348,0.8443,0.2906
+clinical_union_values_no_indicators (ascertainment caveat),210,20,0.7149,0.5505,0.8632,0.3188
+clinical_union+missing_indicators (LEAKY diagnostic - do not cite),210,20,0.8004,0.6734,0.9114,0.3557
+image_only_locked_mean,210,20,0.7792,0.6784,0.8592,0.2264
+combined_intraop+image,210,20,0.8174,0.7271,0.9027,0.3288

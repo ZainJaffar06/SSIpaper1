@@ -1,0 +1,7 @@
+metric,value,lo,hi,n_boot
+patient_auroc_mean_agg,0.7607,0.6448,0.8598,20000.0
+patient_auprc_mean_agg,0.1715,0.0951,0.3204,20000.0
+patient_auroc_latest_agg,0.7461,,,
+patient_auroc_closest_agg,0.7442,,,
+n_pts,193.0,,,
+n_events,15.0,,,

@@ -1,0 +1,6 @@
+tier,landmark,aggregation,n_pts,n_events,auroc,lo,hi,auprc
+PRIMARY,7,mean of all photos through POD7,193,15,0.7607,0.6454,0.8599,0.1715
+PRIMARY / aggregation sensitivity,7,latest photo through POD7,193,15,0.7461,0.6384,0.8449,0.1617
+PRIMARY / aggregation sensitivity,7,photo closest to POD7,193,15,0.7442,0.6487,0.8316,0.1565
+secondary (9 events),14,mean of all photos through POD14,194,9,0.7093,0.5259,0.8553,0.0969
+descriptive only (2 events),30,mean of all photos through POD30,188,2,0.5376,0.1658,0.9091,0.0275

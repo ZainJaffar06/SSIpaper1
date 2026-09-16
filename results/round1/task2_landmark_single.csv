@@ -1,0 +1,10 @@
+landmark,label,n_pts,n_pos,patient_auroc,lo,hi
+7,eventual_SSI,198,20,0.7643,0.6733,0.8459
+7,not_yet_diagnosed_at_t (unknown-dx pos excluded),193,15,0.7607,0.6473,0.8567
+7,not_yet_diagnosed_at_t (SENSITIVITY: unknown-dx pos retained),195,17,0.7614,0.648,0.8525
+14,eventual_SSI,205,20,0.7808,0.6865,0.8656
+14,not_yet_diagnosed_at_t (unknown-dx pos excluded),194,9,0.7093,0.538,0.856
+14,not_yet_diagnosed_at_t (SENSITIVITY: unknown-dx pos retained),196,11,0.7229,0.5761,0.8495
+30,eventual_SSI,206,20,0.7747,0.674,0.8571
+30,not_yet_diagnosed_at_t (unknown-dx pos excluded),188,2,0.5376,0.1658,0.9086
+30,not_yet_diagnosed_at_t (SENSITIVITY: unknown-dx pos retained),190,4,0.6573,0.2139,0.8783

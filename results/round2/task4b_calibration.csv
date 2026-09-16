@@ -1,0 +1,4 @@
+model,brier,cal_slope,cal_intercept
+clinical_intraop,0.0889,0.011,-2.227
+image,0.083,0.875,-0.231
+combined,0.0873,0.05,-2.141

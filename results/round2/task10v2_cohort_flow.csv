@@ -1,0 +1,4 @@
+stage,n_img,n_pos_img,n_pts,n_pos_pts,note
+rated images,468,27,102,9,positives counted where outcome known
+"outcome known (locked roster, all arms)",435,27,95,9,33 images from 7 pids not in any locked arm -> excluded from label metrics
+"matched to locked smartphone (pid,POD)",277,14,84,5,paired CNN-vs-consensus cohort; POSITIVE PATIENTS ARE FEW - see caveat

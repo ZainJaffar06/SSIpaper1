@@ -1,0 +1,2 @@
+analysis,n_img,n_pos_img,n_pos_pts,n_dropped_postdx,consensus_auroc,consensus_lo,consensus_hi,cnn_auroc,cnn_lo,cnn_hi,delta,delta_lo,delta_hi,p
+pre-dx restricted CNN-vs-consensus,271,8,3,6,0.6328,0.4365,1.0,0.894,0.7546,0.9637,0.2612,-0.2537,0.5096,0.333

@@ -1,0 +1,5 @@
+probe,image_auroc,img_lo,img_hi,image_auprc,patient_auroc
+pod_only,0.5132,0.4066,0.6207,0.0999,0.6091
+acquisition,0.6316,0.5567,0.7116,0.1296,0.6513
+behavior_past_only,0.622,0.492,0.7207,0.1383,0.6516
+acquisition+behavior+pod,0.6777,0.5829,0.7605,0.1525,0.6995

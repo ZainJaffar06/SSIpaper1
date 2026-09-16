@@ -1,0 +1,9 @@
+contrast,delta,lo,hi,p_two_sided
+resnet18_s42_minus_resnet18_s20260807(patient),-0.1018,-0.2259,0.0222,0.093
+resnet18_s7_minus_resnet18_s20260807(patient),-0.0329,-0.1267,0.0587,0.493
+efficientnet_b0_s20260807_minus_resnet18_s20260807(patient),-0.0484,-0.191,0.0744,0.463
+efficientnet_b0_s42_minus_resnet18_s20260807(patient),-0.0361,-0.1764,0.1015,0.644
+efficientnet_b0_s7_minus_resnet18_s20260807(patient),0.0211,-0.116,0.156,0.777
+vit_b_16_s20260807_minus_resnet18_s20260807(patient),-0.0016,-0.0983,0.1069,0.934
+vit_b_16_s42_minus_resnet18_s20260807(patient),-0.0508,,,0.298
+vit_b_16_s7_minus_resnet18_s20260807(patient),-0.0989,,,0.104

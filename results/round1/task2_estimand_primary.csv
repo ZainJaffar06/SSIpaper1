@@ -1,0 +1,4 @@
+estimand,n_pts,n_pos,patient_auroc,lo,hi,note
+locked_all_images (LEAKY: sees post-dx),210,20,0.7792,,,primary as locked 2026-08-07 (full 210-pt frame)
+detect_before_diagnosis (pre-dx images only),204,18,0.7811,0.6762,0.8731,"excluded: ['RU-A1345', 'RU-A1347'] (no dx date) + [] (no pre-dx image); 9 images without a parseable POD (5 patients, all SSI-negative) excluded from POD-dependent analyses"
+"paired delta (pre-dx minus locked, same 204 pts)",204,18,0.0066,-0.0107,0.0234,"p=0.414 (two-sided, paired patient bootstrap)"

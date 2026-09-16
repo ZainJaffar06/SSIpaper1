@@ -1,0 +1,5 @@
+contrast,image_delta,image_p,patient_delta,patient_lo,patient_hi,patient_p
+CNN_minus_pod_only,0.2422,0.0,0.1701,-0.0053,0.3429,0.057
+CNN_minus_acquisition,0.1238,0.0,0.1279,0.0234,0.2363,0.018
+CNN_minus_behavior_past_only,0.1334,0.0,0.1276,-0.0168,0.272,0.083
+CNN_minus_acquisition+behavior+pod,0.0777,0.004,0.0797,-0.0195,0.1797,0.12

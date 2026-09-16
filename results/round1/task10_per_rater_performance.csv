@@ -1,0 +1,16 @@
+rater,group,profession,sens,spec,flag_rate,youden
+SSIRATER01,Non-surgeon,Nurse ED,0.1304,0.9888,0.0171,0.1192
+SSIRATER02,Non-surgeon,Nurse OR,0.3043,0.9056,0.1047,0.21
+SSIRATER03,Non-surgeon,Fellow Infectious Diseases,0.3913,0.8719,0.141,0.2632
+SSIRATER04,Non-surgeon,Medicine resident applying to ID,0.3478,0.7303,0.2735,0.0782
+SSIRATER05,Surgeon,Acute care surgery fellow,0.2609,0.9775,0.0342,0.2384
+SSIRATER06,Surgeon,Acute care surgery fellow,0.3913,0.8809,0.1325,0.2722
+SSIRATER07,Non-surgeon,Emergency medicine resident,0.3913,0.6719,0.3312,0.0632
+SSIRATER09,Non-surgeon,Emergency medicine resident,0.6522,0.5753,0.4359,0.2275
+SSIRATER10,Non-surgeon,Emergency medicine resident,0.5217,0.6427,0.3654,0.1644
+SSIRATER11,Non-surgeon,Emergency medicine resident,0.4348,0.8427,0.1709,0.2775
+SSIRATER12,Surgeon,Acute care surgeon attending,0.1739,0.9596,0.047,0.1335
+SSIRATER13,Surgeon,Acute care surgeon attending,0.5652,0.6157,0.3932,0.1809
+SSIRATER14,Surgeon,Acute care surgeon attending,0.1739,0.991,0.0171,0.1649
+SSIRATER16,Surgeon,Acute care surgeon attending,0.1304,0.9708,0.0342,0.1012
+SSIRATER17,Surgeon,Transplant surgeon,0.8696,0.0989,0.8996,-0.0316

@@ -1,0 +1,2 @@
+analysis,n_pts,n_events,paired_delta,lo,hi,p_two_sided,note
+leak-robustness sensitivity (pre-dx truncation),204,18,0.0066,-0.0108,0.0249,0.435,"cite ONLY this paired same-patient delta; controls have no analogous censoring time, so this is a sensitivity, not the primary estimand"

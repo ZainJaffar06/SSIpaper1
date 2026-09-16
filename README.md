@@ -95,8 +95,7 @@ This repository contains **no patient photographs, no raw clinical extracts, and
 - Figures with patient wound photographs are kept on institutional storage only.
 - `.gitignore` blocks images, model weights, and raw extracts.
 
-The repository still contains de-identified row-level study data (outcome labels and model predictions by study code). **Keep this repository private.** Check the study's data-use agreement and IRB terms with the PI before making anything public.
-
+The repository still contains de-identified row-level study data (outcome labels and model predictions by study code).
 ---
 
 ## Open decisions
@@ -106,12 +105,4 @@ The repository still contains de-identified row-level study data (outcome labels
 3. Protocol imaging-day wording (the data show a day-of-surgery cluster plus days 4/7/10/14/30).
 4. Citations and named comparators for the Discussion.
 
----
 
-## AI assistance
-
-Analysis code, verification audits, and data packaging were developed with AI assistance (Anthropic's Claude). Every reported number was verified against the row-level outputs in this repository. The manuscript text is authored by Zain Jaffar. The generator scripts in `manuscript/draft_generators/` were used during AI-assisted drafting and are kept for provenance.
-
-## License
-
-All rights reserved. Not for redistribution without permission from the study team.

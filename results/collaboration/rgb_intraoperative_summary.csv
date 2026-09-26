@@ -1,0 +1,4 @@
+timepoint,n_pts,n_events,patient_auroc,lo,hi
+pre-closure,139,14,0.7057,0.594,0.8104
+post-closure,153,16,0.7856,0.684,0.8735
+pre+post mean,131,12,0.7752,0.6596,0.8727

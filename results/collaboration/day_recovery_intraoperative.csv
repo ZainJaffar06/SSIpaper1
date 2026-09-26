@@ -1,0 +1,599 @@
+pid,Image_Filename,phase_norm,pod_as_analysed,recovered_pod,evidence,y_true
+RU-A1048,RU-A1048 (Post-Standard 2).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1048,RU-A1048 (Post-Standard 1).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1080,RU-A1080 (Post-Standard 1).jpg,post,0.0,0.0,paired_thermal_EXIF,0
+RU-A1080,RU-A1080 (Post-Standard 2).jpg,post,0.0,0.0,paired_thermal_EXIF,0
+RU-A1089,RU-A1089 (Post-Standard 1).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1089,RU-A1089 (Post-Standard 2).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1099,RU-A1099 (Post-Standard 1).jpeg,post,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1099,RU-A1099 (Post-Standard 2).jpeg,post,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1107,Day_0.05850.jpg,pre,0.0,0.0,filename_day_number,1
+RU-A1107,Day_1.02596.jpg,pre,0.0,1.0,filename_day_number,1
+RU-A1107,RU-A1107 (Post-Standard 1).HEIC,post,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1107,RU-A1107 (Post-Standard 2).HEIC,post,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1016,RU-A1016 (Post-Standard 1).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1016,RU-A1016 (Post-Standard 2).HEIC,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1016,RU-A1016 (Pre-Standard 1).HEIC,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1016,RU-A1016 (Pre-Standard 2).HEIC,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1016,RU-A1016 (Pre-Standard 3).HEIC,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1052,RU-A1052 (Post-Standard 1).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1052,RU-A1052 (Post-Standard 2).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1052,RU-A1052 (Pre-Standard 1).JPG,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1058,RU-A1058 (Post-Standard 1).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1058,RU-A1058 (Post-Standard 2).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1058,RU-A1058 (Pre-Standard 1).JPG,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1058,RU-A1058 (Pre-Standard 2).JPG,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1074,RU-A1074 (Post-Standard 1).HEIC,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1074,RU-A1074 (Post-Standard 2).HEIC,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1074,RU-A1074 (Pre-Standard 1).HEIC,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1074,RU-A1074 (Pre-Standard 2).HEIC,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1098,Day_0.10577.jpg,pre,0.0,0.0,filename_day_number,0
+RU-A1098,Day_0.86644.jpg,pre,0.0,0.0,filename_day_number,0
+RU-A1098,RU-A1098 (Post-Standard 1).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1098,RU-A1098 (Post-Standard 2).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1050,RU-A1050 (Pre-Standard 2).JPG,pre,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1050,RU-A1050 (Pre-Standard 1).JPG,pre,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1068,RU-A1068 (Post-Standard 1).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1068,RU-A1068 (Post-Standard 2).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1068,RU-A1068 (Pre-Standard 1).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1068,RU-A1068 (Pre-Standard 2).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1069,RU-A1069 Post-Standard 1.JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1069,RU-A1069 Post-Standard 2.JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1069,RU-A1069 Pre-Standard 1.JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1069,RU-A1069 Pre-Standard 2.JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1071,RU-A1071 (Post-Standard 1).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1071,RU-A1071 (Post-Standard 2).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1071,RU-A1071 (Post-Standard 3).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1071,RU-A1071 (Pre-Standard 1).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1071,RU-A1071 (Pre-Standard 2).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1071,RU-A1071 (Pre-Standard 3).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1072,RU-A1072 (Post-Standard 1).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1072,RU-A1072 (Post-Standard 2).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1072,RU-A1072 (Pre-Standard 1).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1072,RU-A1072 (Pre-Standard 2).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1073,RU-A1073 (Post-Standard 1).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1073,RU-A1073 (Post-Standard 2).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1073,RU-A1073 (Post-Standard 3).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1073,RU-A1073 (Pre-Standard 1).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1073,RU-A1073 (Pre-Standard 2).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1076,RU-A1076 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1076,RU-A1076 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1076,RU-A1076 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1076,RU-A1076 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1126,RU-A1126 (Post- Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1126,RU-A1126 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1126,RU-A1126 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1126,RU-A1126 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1127,Day_0.00962.jpg,pre,0.0,0.0,filename_day_number,0
+RU-A1127,Day_0.02322.jpg,pre,0.0,0.0,filename_day_number,0
+RU-A1127,Day_0.02351.jpg,post,0.0,0.0,filename_day_number,0
+RU-A1127,Day_0.03594.jpg,post,0.0,0.0,filename_day_number,0
+RU-A1128,Day_0.00974.jpg,pre,0.0,0.0,filename_day_number,0
+RU-A1128,Day_0.00999.jpg,pre,0.0,0.0,filename_day_number,0
+RU-A1128,Day_0.04795.jpg,post,0.0,0.0,filename_day_number,0
+RU-A1128,Day_0.04802.jpg,post,0.0,0.0,filename_day_number,0
+RU-A1129,Day_0.02068.jpg,pre,0.0,0.0,filename_day_number,0
+RU-A1129,Day_5.80760.jpg,pre,0.0,5.0,filename_day_number,0
+RU-A1129,RU-A1129 (Post-Standard 1).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1129,RU-A1129 (Post-Standard 2).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1130,RU-A1130 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1130,RU-A1130 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1130,RU-A1130 (Pre-Standard 1).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1130,RU-A1130 (Pre-Standard 2).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1132,RU-A1132 (Post-Standard 1).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1132,RU-A1132 (Post-Standard 2).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1132,RU-A1132 (Pre-Standard 1).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1132,RU-A1132 (Pre-Standard 2).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1133,RU-A1133 (Post-Standard 1) .JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1133,RU-A1133 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1134,RU-A1134 Post-Standard 1.JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1134,RU-A1134 Post-Standard 2.JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1134,RU-A1134 Pre-Standard 1.JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1134,RU-A1134 Pre-Standard 2.JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1135,RU-A1135 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1135,RU-A1135 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1135,RU-A1135 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1135,RU-A1135 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1136,RU-A1136 (Post-Standard 1).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1136,RU-A1136 (Post-Standard 2).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1136,RU-A1136 (Pre-Standard 1).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1136,RU-A1136 (Pre-Standard 2).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1138,RU-A1138 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1138,RU-A1138 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1138,RU-A1138 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1138,RU-A1138 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1139,RU-A1139 (Post-Standard 1).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1139,RU-A1139 (Post-Standard 2).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1139,RU-A1139 (Pre-Standard 1).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1139,RU-A1139 (Pre-Standard 2).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1140,RU-A1140 (Post-Standard 1).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1140,RU-A1140 (Post-Standard 2).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1140,RU-A1140 (Pre-Standard 1).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1140,RU-A1140 (Pre-Standard 2).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1141,RU-A1141 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1141,RU-A1141 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1141,RU-A1141 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1141,RU-A1141 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1142,RU-A1142 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1142,RU-A1142 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1144,RU-A1144 (Post-Standard 1).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1144,RU-A1144 (Post-Standard 2).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1144,RU-A1144 (Pre-Standard 1).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1144,RU-A1144 (Pre-Standard 2).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1145,RU-A1145 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1145,RU-A1145 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1145,RU-A1145 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1145,RU-A1145 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1146,RU-A1146 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1146,RU-A1146 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1146,RU-A1146 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1146,RU-A1146 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1147,RU-A1147 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1147,RU-A1147 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1147,RU-A1147 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1147,RU-A1147 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1202,RU-A1202 (Post-Standard 1).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1202,RU-A1202 (Post-Standard 2).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1202,RU-A1202 (Pre-Standard 1).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1202,RU-A1202 (Pre-Standard 2).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1201,RU-A1201 Post-Standard 1.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1201,RU-A1201 Post-Standard 2.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1201,RU-A1201 Pre-Standard 1.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1201,RU-A1201 Pre-Standard 2.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1203,RU-A1203 (Post-Standard 1).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1203,RU-A1203 (Post-Standard 2).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1203,RU-A1203 (Pre-Standard 1).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1203,RU-A1203 (Pre-Standard 2).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1205,RU-A1205 Post-Standard 1.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1205,RU-A1205 Post-Standard 2.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1205,RU-A1205 Pre-Standard 1.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1205,RU-A1205 Pre-Standard 2.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1206,RU-A1206 Post-Standard 1.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1206,RU-A1206 Post-Standard 2.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1207,RU-A1207 Post-Standard 1.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1207,RU-A1207 Post-Standard 2.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1207,RU-A1207 Pre-Standard 1.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1207,RU-A1207 Pre-Standard 2.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1208,RU-A1208 Post-Standard 1.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1208,RU-A1208 Post-Standard 2.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1208,RU-A1208 Pre-Standard 1.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1208,RU-A1208 Pre-Standard 2.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1209,RU-A1209 Post-Standard 1.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1209,RU-A1209 Post-Standard 2.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1210,RU-A1210 Post-Standard 1.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1210,RU-A1210 Post-Standard 2.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1210,RU-A1210 Pre-Standard 1.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1210,RU-A1210 Pre-Standard 2.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1211,RU-A1211 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1211,RU-A1211 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1211,RU-A1211 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1211,RU-A1211 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1212,RU-A1212 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1212,RU-A1212 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1212,RU-A1212 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1212,RU-A1212 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1213,RU-A1213 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1213,RU-A1213 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1213,RU-A1213 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1213,RU-A1213 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1214,RU-A1214 Post-Standard 1.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1214,RU-A1214 Post-Standard 2.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1214,RU-A1214 Pre-Standard 1.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1214,RU-A1214 Pre-Standard 2.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1215,RU-A1215 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1215,RU-A1215 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1215,RU-A1215 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1215,RU-A1215 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1216,RU-A1216 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1216,RU-A1216 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1216,RU-A1216 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1216,RU-A1216 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1217,RU-A1217 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1217,RU-A1217 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1217,RU-A1217 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1217,RU-A1217 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1218,RU-A1218 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1218,RU-A1218 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1218,RU-A1218 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1218,RU-A1218 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1219,Day_0.17159.jpg,post,0.0,0.0,filename_day_number,0
+RU-A1219,Day_0.17182.jpg,post,0.0,0.0,filename_day_number,0
+RU-A1220,Day_0.20016.jpg,pre,0.0,0.0,filename_day_number,0
+RU-A1220,Day_0.20042.jpg,pre,0.0,0.0,filename_day_number,0
+RU-A1220,Day_0.22006.jpg,post,0.0,0.0,filename_day_number,0
+RU-A1220,Day_0.22043.jpg,post,0.0,0.0,filename_day_number,0
+RU-A1241,RU-A1241 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1241,RU-A1241 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1241,RU-A1241 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1241,RU-A1241 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1242,RU-A1242 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1242,RU-A1242 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1242,RU-A1242 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1242,RU-A1242 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1243,RU-A1243 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1243,RU-A1243 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1243,RU-A1243 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1243,RU-A1243 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1244,RU-A1244 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1244,RU-A1244 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1244,RU-A1244 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1244,RU-A1244 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1249,RU-A1249 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1249,RU-A1249 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1249,RU-A1249 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1249,RU-A1249 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1261,RU-A1261 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1261,RU-A1261 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1261,RU-A1261 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1261,RU-A1261 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1262,RU-A1262 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1262,RU-A1262 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1262,RU-A1262 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1262,RU-A1262 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1263,RU-A1263 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1263,RU-A1263 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1264,RU-A1264 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1264,RU-A1264 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1264,RU-A1264 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1264,RU-A1264 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1265,Day_0.00368.jpg,pre,0.0,0.0,filename_day_number,0
+RU-A1265,Day_0.00391.jpg,pre,0.0,0.0,filename_day_number,0
+RU-A1265,Day_0.03803.jpg,post,0.0,0.0,filename_day_number,0
+RU-A1266,Day_0.07123.jpg,pre,0.0,0.0,filename_day_number,0
+RU-A1266,Day_0.07147.jpg,pre,0.0,0.0,filename_day_number,0
+RU-A1266,Day_0.08096.jpg,post,0.0,0.0,filename_day_number,0
+RU-A1266,Day_0.08123.jpg,post,0.0,0.0,filename_day_number,0
+RU-A1267,Day_0.14475.jpg,post,0.0,0.0,filename_day_number,0
+RU-A1267,Day_0.14522.jpg,post,0.0,0.0,filename_day_number,0
+RU-A1283,RU-A1283 Post-Standard 1.JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1283,RU-A1283 Post-Standard 2.JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1254,RU-A1254 Pre-Standard 1.JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1254,RU-A1254 Pre-Standard 2.JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1254,RU-A1254 Post-Standard 1.JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1254,RU-A1254 Post-Standard 2.JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1255,RU-A1255 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1255,RU-A1255 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1255,RU-A1255 (Pre-Standard 1).JPG ,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1255,RU-A1255 (Pre-Standard 2).JPG ,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1258,Post-Standard 1,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1258,Pre-Standard 1,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1259,Post-Standard 2,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1259,Pre-Standard 2,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1308,Post-Standard 1,post,0.0,0.0,paired_thermal_EXIF,1
+RU-A1308,Post-Standard 2,post,0.0,0.0,paired_thermal_EXIF,1
+RU-A1308,Pre-Standard 1,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1308,Pre-Standard 2,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1029,RU-A1029 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1029,RU-A1029 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1029,RU-A1029 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1029,RU-A1029 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1035,RU-A1035 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1035,RU-A1035 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1035,RU-A1035 (Post-Standard 3).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1062,RU-A1062 (Post-Standard 1).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1062,RU-A1062 (Post-Standard 2).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1049,RU-A1049 (Post-Standard 1).JPG,post,0.0,0.0,paired_thermal_EXIF,0
+RU-A1049,RU-A1049 (Post-Standard 2).JPG,post,0.0,0.0,paired_thermal_EXIF,0
+RU-A1049,RU-A1049 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1049,RU-A1049 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1070,RU-A1070 (Post-Standard 1).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1070,RU-A1070 (Post-Standard 2).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1070,RU-A1070 (Pre-Standard 1).JPG,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1070,RU-A1070 (Pre-Standard 2).JPG,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1014,RU-A1014 (Post-Standard 1).JPG,post,0.0,0.0,paired_thermal_EXIF,0
+RU-A1014,RU-A1014 (Post-Standard 2).JPG,post,0.0,0.0,paired_thermal_EXIF,0
+RU-A1014,RU-A1014 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1014,RU-A1014 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1030,RU-A1030 (Post-Standard 1).JPG,post,0.0,0.0,paired_thermal_EXIF,0
+RU-A1030,RU-A1030 (Post-Standard 2).JPG,post,0.0,0.0,paired_thermal_EXIF,0
+RU-A1030,RU-A1030 (Pre-Standard 1).JPG,pre,0.0,0.0,paired_thermal_EXIF,0
+RU-A1030,RU-A1030 (Pre-Standard 2).JPG,pre,0.0,0.0,paired_thermal_EXIF,0
+RU-A1176,RU-A1176 (Post-Standard 1).jpg,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1176,RU-A1176 (Post-Standard 2).jpg,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1176,RU-A1176 (Pre-Standard 1).jpg,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1176,RU-A1176 (Pre-Standard 2).jpg,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1103,RU-A1103 (Pre-Standard 1).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1103,RU-A1103 (Pre-Standard 2).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1103,RU-A1103 (Post-Standard 1).jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1103,RU-A1103 (Post-Standard 2).jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1106,RU-A1106 (Pre-Standard 1).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1106,RU-A1106 (Pre-Standard 2).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1106,RU-A1106 (Post-Standard 1).jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1106,RU-A1106 (Post-Standard 2).jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1109,RU-A1109 (Pre-Standard 1).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1109,RU-A1109 (Pre-Standard 2).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1110,RU-A1110 (Post-Standard 1).jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1110,RU-A1110 (Post-Standard 2).jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1114,RU-A1114 (Pre-Standard 1).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1114,RU-A1114 (Pre-Standard 2).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1114,RU-A1114 (Post-Standard 1).jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1114,RU-A1114 (Post-Standard 2).jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1115,RU-A1115 (Post-Standard 1).jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1115,RU-A1115 (Post-Standard 2).jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1115,RU-A1115 (Pre-Standard 1).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1115,RU-A1115 (Pre-Standard 2).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1117,RU-A1117 (Pre-Standard 1).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1117,RU-A1117 (Pre-Standard 2).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1117,RU-A1117 (Post-Standard 1).jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1117,RU-A1117 (Post-Standard 2).jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1118,RU-A1118 (Post-Standard 1).jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1118,RU-A1118 (Post-Standard 2).jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1120,RU-A1120 (Pre-Standard 1).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1120,RU-A1120 (Pre-Standard 2).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1120,RU-A1120 (Post-Standard 1).jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1120,RU-A1120 (Post-Standard 2).jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1041,RU-A1041 (Pre-Standard 1).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1041,RU-A1041 (Pre-Standard 2).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1041,RU-A1041 (Post-Standard 2).jpg ,post,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1041,RU-A1041 (Post-Standard 1) Re-opened.jpg ,post,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1041,RU-A1041 (Pre-Standard 2) Re-opened.jpg ,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1042,RU-A1042 (Post-Standard 1).jpg ,post,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1042,RU-A1042 (Post-Standard 2).jpg ,post,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1042,RU-A1042 (Pre-Standard 1).jpg ,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1042,RU-A1042 (Pre-Standard 2).jpg ,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1268,RU-A1268 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1268,RU-A1268 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1268,RU-A1268 Pre-Standard 1.jpg ,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1268,RU-A1268 Pre-Standard 2.jpg ,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1276,Day_0.13475.jpeg,pre,0.0,0.0,filename_day_number,0
+RU-A1276,Day_0.13501.jpeg,pre,0.0,0.0,filename_day_number,0
+RU-A1276,RU-A1276 D7 Post-Op 1.jpeg,post,0.0,7.0,filename_day_number,0
+RU-A1276,RU-A1276 D7 Post-Op 2.jpeg,post,0.0,7.0,filename_day_number,0
+RU-A1278,RU-A1278 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1278,RU-A1278 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1278,RU-A1278 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1278,RU-A1278 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1277,RU-A1277 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1277,RU-A1277 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1279,Day_0.13733.jpeg,pre,0.0,0.0,filename_day_number,0
+RU-A1279,Day_0.13751.jpeg,pre,0.0,0.0,filename_day_number,0
+RU-A1064,RU-A1064 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1064,RU-A1064 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1064,RU-A1064 (Post-Standard 1).JPG,post,0.0,0.0,paired_thermal_EXIF,0
+RU-A1064,RU-A1064 (Post-Standard 2).JPG,post,0.0,0.0,paired_thermal_EXIF,0
+RU-A1156,RU-A1156 (Pre-Standard 1).JPG,pre,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1156,RU-A1156 (Pre-Standard 2).JPG,pre,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1156,RU-A1156 (Post-Standard 1).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1156,RU-A1156 (Post-Standard 2).JPG,post,0.0,0.0,paired_thermal_EXIF,1
+RU-A1175,RU-A1175 (Post-Standard 1).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1175,RU-A1175 (Pre-Standard 1).JPG,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1175,RU-A1175 (Pre-Standard 2).JPG,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1180,RU-A1180 (Pre-Standard 1).JPG,pre,0.0,-1.0,own_EXIF_vs_surgery_date,1
+RU-A1180,RU-A1180 (Pre-Standard 2).JPG,pre,0.0,-1.0,own_EXIF_vs_surgery_date,1
+RU-A1137,RU-A1137 (Post-Standard 1).JPG,post,0.0,1.0,paired_thermal_EXIF,0
+RU-A1137,RU-A1137 (Post-Standard 2).JPG,post,0.0,1.0,paired_thermal_EXIF,0
+RU-A1137,RU-A1137 (Pre-Standard 1).JPG,pre,0.0,1.0,paired_thermal_EXIF,0
+RU-A1137,RU-A1137 (Pre-Standard 2).JPG,pre,0.0,1.0,paired_thermal_EXIF,0
+RU-A1150,RU-A1150 (Post-Standard 1).JPG,post,0.0,0.0,paired_thermal_EXIF,0
+RU-A1150,RU-A1150 (Post-Standard 2).JPG,post,0.0,0.0,paired_thermal_EXIF,0
+RU-A1150,RU-A1150 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1150,RU-A1150 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1186,RU-A1186 (Post-Standard 1).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1186,RU-A1186 (Post-Standard 2).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1186,RU-A1186 (Pre-Standard 1).JPG,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1186,RU-A1186 (Pre-Standard 2).JPG,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1028,RU-A1028 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1028,RU-A1028 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1028,RU-A1028 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1028,RU-A1028 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1078,RU-A1078 (Post-Standard 1).jpg,post,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1078,RU-A1078 (Post-Standard 2).jpg,post,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1078,RU-A1078 (Pre-Standard 1).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1078,RU-A1078 (Pre-Standard 2).jpg,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1079,RU-A1079 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1079,RU-A1079 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1081,RU-A1081 (Post-Standard 1).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1081,RU-A1081 (Post-Standard 2).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1081,RU-A1081 (Pre-Standard 1).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1081,RU-A1081 (Pre-Standard 2).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1082,RU-A1082 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1082,RU-A1082 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1082,RU-A1082 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1083,RU-A1083 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1083,RU-A1083 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1083,RU-A1083 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1083,RU-A1083 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1084,RU-A1084 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1084,RU-A1084 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1084,RU-A1084 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1084,RU-A1084 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1085,RU-A1085 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1085,RU-A1085 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1085,RU-A1085 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1085,RU-A1085 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1087,RU-A1087 (Post-Standard 1).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1087,RU-A1087 (Post-Standard 2).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1087,RU-A1087 (Pre-Standard 1).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1087,RU-A1087 (Pre-Standard 2).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1092,RU-A1092(Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1092,RU-A1092(Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1148,RU-A1148 (Post-Standard 1).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1148,RU-A1148 (Post-Standard 2).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1148,RU-A1148 (Pre-Standard 1).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1148,RU-A1148 (Pre-Standard 2).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1152,RU-A1152 (Post-Standard 1).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1152,RU-A1152 (Post-Standard 2).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1152,RU-A1152 (Pre-Standard 1).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1152,RU-A1152 (Pre-Standard 2).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1157,RU-A1157 (Post-Standard 1).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1157,RU-A1157 (Post-Standard 2).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1157,RU-A1157 (Pre-Standard 1).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1157,RU-A1157 (Pre-Standard 2).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1158,RU-A1158 (Post-Standard 1).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1158,RU-A1158 (Post-Standard 2).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1158,RU-A1158 (Pre-Standard 1).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1158,RU-A1158 (Pre-Standard 2).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1159,RU-A1159 (Post-Standard 1).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1159,RU-A1159 (Post-Standard 2).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1159,RU-A1159 (Pre-Standard 1).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1159,RU-A1159 (Pre-Standard 2).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1160,RU-A1160 (Post-Standard 1).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1160,RU-A1160 (Post-Standard 2).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1160,RU-A1160 (Pre-Standard 1).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1160,RU-A1160 (Pre-Standard 2).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1161,RU-A1161 (Post-Standard 1).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1161,RU-A1161 (Post-Standard 2).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1161,RU-A1161 (Pre-Standard 1).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1161,RU-A1161 (Pre-Standard 2).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1162,RU-A1162 (Post-Standard 1).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1162,RU-A1162 (Post-Standard 2).HEIC,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1162,RU-A1162 (Pre-Standard 1).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1162,RU-A1162 (Pre-Standard 2).HEIC,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1164,RU-A1164 (Post-Standard 1).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1164,RU-A1164 (Post-Standard 2).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1165,RU-A1165 (Post-Standard 1).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1165,RU-A1165 (Post-Standard 2).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1165,RU-A1165 (Pre-Standard 1).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1165,RU-A1165 (Pre-Standard 2).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1167,RU-A1167 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1167,RU-A1167 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1167,RU-A1167 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1167,RU-A1167 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1168,RU-A1168 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1168,RU-A1168 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1168,RU-A1168 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1168,RU-A1168 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1169,RU-A1169 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1169,RU-A1169 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1170,RU-A1170 (Post-Standard 1).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1170,RU-A1170 (Post-Standard 2).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1170,RU-A1170 (Pre-Standard 1).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1170,RU-A1170 (Pre-Standard 2).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1171,RU-A1171 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1171,RU-A1171 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1171,RU-A1171 (Pre-Standard 1).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1171,RU-A1171 (Pre-Standard 2).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1172,RU-A1172 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1172,RU-A1172 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1172,RU-A1172 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1172,RU-A1172 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1173,RU-A1173 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1173,RU-A1173 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1173,RU-A1173 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1173,RU-A1173 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1174,RU-A1174 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1174,RU-A1174 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1174,RU-A1174 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1174,RU-A1174 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1154,RU-A1154 (Post-Standard 1).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1154,RU-A1154 (Post-Standard 2).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1154,RU-A1154 (Pre-Standard 1).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1154,RU-A1154 (Pre-Standard 2).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1155,RU-A1155 (Post-Standard 1).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1155,RU-A1155 (Post-Standard 2).jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1155,RU-A1155 (Pre-Standard 1).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1155,RU-A1155 (Pre-Standard 2).jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1222,RU-A1222 Post-Standard 1.jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1222,RU-A1222 Post-Standard 2.jpg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1222,RU-A1222 Pre-Standard 1.jpg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1222,RU-A1222 Pre-Standard 2.jpg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1223,RU-A1223 Post-Standard 1.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1223,RU-A1223 Post-Standard 2.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1223,RU-A1223 Pre-Standard 1.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1223,RU-A1223 Pre-Standard 2.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1224,RU-A1224 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1224,RU-A1224 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1225,RU-A1225 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1225,RU-A1225 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1226,RU-A1226 Post-Standard 1.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1226,RU-A1226 Post-Standard 2.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1227,RU-A1227 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1227,RU-A1227 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1227,RU-A1227 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1227,RU-A1227 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1228,RU-A1228 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1228,RU-A1228 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1228,RU-A1228 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1228,RU-A1228 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1229,RU-A1229 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1229,RU-A1229 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1229,RU-A1229 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1229,RU-A1229 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1230,RU-A1230 Post-Standard 1.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1230,RU-A1230 Post-Standard 2.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1230,RU-A1230 Pre-Standard 1.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1230,RU-A1230 Pre-Standard 2.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1234,RU-A1234 Post-Standard 1.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1234,RU-A1234 Post-Standard 2.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1234,RU-A1234 Pre-Standard 1.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1234,RU-A1234 Pre-Standard 2.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1236,RU-A1236 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1236,RU-A1236 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1237,RU-A1237 Post-Standard 1.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1237,RU-A1237 Post-Standard 2.png,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1237,RU-A1237 Pre-Standard 1.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1237,RU-A1237 Pre-Standard 2.png,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1239,RU-A1239 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1239,RU-A1239 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1239,RU-A1239 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1239,RU-A1239 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1240,RU-A1240 post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1240,RU-A1240 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1240,RU-A1240 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1240,RU-A1240 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1345,RU-A1345 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1345,RU-A1345 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1345,RU-A1345 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1345,RU-A1345 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1245,RU-A1245 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1245,RU-A1245 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1245,RU-A1245 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1245,RU-A1245 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1246,RU-A1246 Post-Standard 1.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1246,RU-A1246 Post-Standard 2.jpeg,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1246,RU-A1246 Pre-Standard 1.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1246,RU-A1246 Pre-Standard 2.jpeg,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1347,RU-A1347 Pre-Standard 1.jpg,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1347,RU-A1347 Pre-Standard 2.jpg,pre,0.0,0.0,intraoperative_by_naming_convention,1
+RU-A1166,Day_3.22684.jpg,post,0.0,3.0,filename_day_number,0
+RU-A1166,Day_3.22706.jpg,post,0.0,3.0,filename_day_number,0
+RU-A1166,RU-A1166 (Post-Standard 1).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1166,RU-A1166 (Post-Standard 2).JPG,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1166,RU-A1166 (Pre-Standard 1).JPG,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1166,RU-A1166 (Pre-Standard 2).JPG,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1111,Day_0.02806.jpg,pre,0.0,0.0,filename_day_number,0
+RU-A1111,Day_0.05565.jpg,post,0.0,0.0,filename_day_number,0
+RU-A1111,Day_0.07673.jpg,post,0.0,0.0,filename_day_number,0
+RU-A1111,Day_0.13289.jpg,pre,0.0,0.0,filename_day_number,0
+RU-A1111,Day_7.96468.jpg,post,0.0,7.0,filename_day_number,0
+RU-A1111,Day_7.96489.jpg,post,0.0,7.0,filename_day_number,0
+RU-A1111,Day_8.89175.jpg,post,0.0,8.0,filename_day_number,0
+RU-A1111,Day_8.89209.jpg,post,0.0,8.0,filename_day_number,0
+RU-A1111,Day_9.85187.jpg,post,0.0,9.0,filename_day_number,0
+RU-A1111,Day_9.85224.jpg,post,0.0,9.0,filename_day_number,0
+RU-A1149,Day_4.02784.jpg,post,0.0,4.0,filename_day_number,0
+RU-A1149,Day_4.02801.jpg,post,0.0,4.0,filename_day_number,0
+RU-A1177,RU-A1177 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1177,RU-A1177 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1177,RU-A1177 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1177,RU-A1177 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1179,RU-A1179 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1179,RU-A1179 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1181,RU-A1181 (Post Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1181,RU-A1181 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1181,RU-A1181 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1181,RU-A1181 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1182,RU-A1182 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1182,RU-A1182 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1182,RU-A1182 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1182,RU-A1182 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1183,RU-A1183 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1183,RU-A1183 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1183,RU-A1183 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1183,RU-A1183 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1185,RU-A1185 (Post-Standard 1).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1185,RU-A1185 (Post-Standard 2).JPG,post,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1185,RU-A1185 (Pre-Standard 1).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1185,RU-A1185 (Pre-Standard 2).JPG,pre,0.0,0.0,intraoperative_by_naming_convention,0
+RU-A1250,RU-A1250 Post-Standard 1.jpeg,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1250,RU-A1250 Post-Standard 2.jpeg,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1250,RU-A1250 Pre-Standard 1.jpeg,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1250,RU-A1250 Pre-Standard 2.jpeg,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1251,RU-A1251 (Post-Standard Photo 1).jpeg,post,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1251,RU-A1251 (Post-Standard Photo 2).jpeg,post,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1251,RU-A1251 (Pre-Standard Photo 1).jpeg,pre,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1251,RU-A1251 (Pre-Standard Photo 2).jpeg,pre,0.0,0.0,own_EXIF_vs_surgery_date,1
+RU-A1252,RU-A1252 Post-Standard 1.jpeg,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1252,RU-A1252 Post-Standard 2.jpeg,post,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1252,RU-A1252 Pre-Standard 1.jpeg,pre,0.0,0.0,own_EXIF_vs_surgery_date,0
+RU-A1252,RU-A1252 Pre-Standard 2.jpeg,pre,0.0,0.0,own_EXIF_vs_surgery_date,0

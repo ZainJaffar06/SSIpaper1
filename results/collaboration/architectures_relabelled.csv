@@ -1,0 +1,10 @@
+model,seed,auroc_old,auroc_new
+efficientnet_b0,20260807,0.7274,0.7392
+efficientnet_b0,42,0.7397,0.7208
+efficientnet_b0,7,0.7968,0.7926
+resnet18,20260807,0.7758,0.745
+resnet18,42,0.6739,0.6837
+resnet18,7,0.7429,0.7411
+vit_b_16,20260807,0.7742,0.76
+vit_b_16,42,0.725,0.6903
+vit_b_16,7,0.6768,0.6705

@@ -1,0 +1,6 @@
+condition,n_pts,events_old,events_new,auroc_old,auroc_new
+full_image,206,19,19,0.7247,0.714
+wound_only,206,19,19,0.6699,0.6164
+background_only,206,19,19,0.8213,0.8337
+sham_wound_only,206,19,19,0.8168,0.7968
+sham_background_only,206,19,19,0.6541,0.6471

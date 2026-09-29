@@ -1,0 +1,21 @@
+analysis,labels,n_pts,n_events,auroc,lo,hi,auprc
+POD-7 primary (mean agg),old (20 SSI),193,15,0.7607,0.6448,0.8598,0.1715
+POD-7 latest photo,old (20 SSI),193,15,0.7461,0.6345,0.8444,0.1617
+POD-7 closest photo,old (20 SSI),193,15,0.7442,0.6456,0.8333,0.1565
+POD-7 primary (mean agg),FINAL (26-pt list),193,15,0.7438,0.6286,0.8464,0.1624
+POD-7 latest photo,FINAL (26-pt list),193,15,0.7419,0.6317,0.8406,0.1578
+POD-7 closest photo,FINAL (26-pt list),193,15,0.7524,0.657,0.8421,0.161
+RGB pre-closure,old (20 SSI),139,14,0.7057,0.5928,0.8101,0.1733
+RGB post-closure,old (20 SSI),153,16,0.7856,0.6845,0.8734,0.2452
+RGB pre+post mean,old (20 SSI),131,12,0.7752,0.661,0.8716,0.1969
+RGB pre-closure,FINAL (26-pt list),139,14,0.7051,0.5931,0.8086,0.1731
+RGB post-closure,FINAL (26-pt list),153,16,0.7632,0.6594,0.857,0.2306
+RGB pre+post mean,FINAL (26-pt list),131,12,0.757,0.6359,0.8648,0.1898
+all-images comparator,old (20 SSI),210,20,0.7792,0.68,0.8634,0.2264
+all-images comparator,FINAL (26-pt list),210,20,0.7653,0.6656,0.8468,0.2173
+"clinical (intraop, refit)",old (20 SSI),210,20,0.7466,0.6047,0.8737,0.3869
+image only,old (20 SSI),210,20,0.7792,0.6854,0.8607,0.2264
+combined (refit),old (20 SSI),210,20,0.7945,0.6806,0.8975,0.3571
+"clinical (intraop, refit)",FINAL (26-pt list),210,20,0.6641,0.4941,0.8125,0.3395
+image only,FINAL (26-pt list),210,20,0.7653,0.6664,0.8498,0.2173
+combined (refit),FINAL (26-pt list),210,20,0.7995,0.6911,0.8901,0.3155

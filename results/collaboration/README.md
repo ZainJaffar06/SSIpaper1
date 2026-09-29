@@ -1,27 +1,49 @@
-# Cross-modality collaboration package (2026-09-26)
+# Cross-modality collaboration package (updated 2026-09-29)
 
 Answers three PI requests: intraoperative RGB timepoints, day recovery for
 unnumbered photos, and a single shared fold map for modality comparison/fusion.
 
-## 1. SHARED_fold_map_v1.csv  — USE THIS FOR ALL MODALITIES
+## 1. SHARED_fold_map_v2.csv  — USE THIS FOR ALL MODALITIES
 
 `pid, fold, y_true, n_smartphone, n_thermal, source`
 
-221 patients (23 SSI+): 210 inherit their fold from the published smartphone
-master map (`MASTER_map_1948_seed42.csv`, seed 42) and 11 thermal-only patients
-were added by stratified assignment (seed 42). Backward compatible: every
-patient already in the master map keeps the same fold, so all published
-smartphone results stand unchanged.
+**289 patients, 26 SSI.** `y_true` is the final 26-patient SSI list confirmed by
+Dr. Kewalramani (`final_ssi_list.txt`); no other label source is used. Folds:
 
-**Why this matters.** The locked per-arm fold maps are NOT interchangeable: of
-the 210 patients present in both the smartphone and the both-modality arms,
-only 33 (16%) landed in the same fold. Scoring thermal on its own arm map and
-RGB on the smartphone map would compare models trained on different splits, and
-any later fusion would leak across folds. Both modalities must report
-per-patient scores on this one file.
+| Fold | Patients | SSI |
+|---|---|---|
+| 0 | 58 | 7 |
+| 1 | 59 | 5 |
+| 2 | 58 | 4 |
+| 3 | 57 | 5 |
+| 4 | 57 | 5 |
 
-Caveat: event counts per fold are uneven (8/2/4/4/5), inherited from the locked
-image-level stratification. Preserved deliberately for backward compatibility.
+Assembled in layers, each added without moving anyone already placed (asserted in
+code): 210 patients inherit their fold from the published smartphone master map
+(`MASTER_map_1948_seed42.csv`, seed 42); 11 thermal-only patients from v1; 3 SSI
+patients with no images in the locked package; and 65 further thermal patients
+from the 2026-09-29 thermal list, assigned by stratified split (seed 42). Two of
+that list's 67 IDs (RU-A1108, RU-A1195) were already present, hence 65 new.
+Every patient in v1 and in the v2 interim file keeps the same fold, so all
+published smartphone results stand unchanged.
+
+`SHARED_fold_map_v1.csv` (221 patients) and `SHARED_fold_map_v2_interim.csv`
+(224 patients) are retained for provenance only and are **superseded**.
+
+**SSI events are not evenly distributed across folds (7/5/4/5/5), and neither
+are patients (58/59/58/57/57). This is expected and does not need correcting:
+every metric in this project is computed on pooled out-of-fold predictions
+across all five folds with a patient-clustered bootstrap, never as an average of
+per-fold metrics, so an uneven split costs a little precision but does not bias
+any estimate. Rebalancing would move patients between folds and invalidate every
+already-trained model.**
+
+**Why one shared map matters.** The locked per-arm fold maps are NOT
+interchangeable: of the 210 patients present in both the smartphone and the
+both-modality arms, only 33 (16%) landed in the same fold. Scoring thermal on its
+own arm map and RGB on the smartphone map would compare models trained on
+different splits, and any later fusion would leak across folds. Both modalities
+must report per-patient scores on this one file.
 
 ## 2. RGB at the intraoperative timepoints
 

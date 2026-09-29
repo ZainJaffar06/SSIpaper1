@@ -53,41 +53,92 @@ masks, and wound-only still fails to beat full-image.
 The healing-stage positive control is unaffected because its labels are
 postoperative stage, not SSI.
 
-## Fold map v2 (`SHARED_fold_map_v2_interim.csv`)
+## Fold map v2 (`SHARED_fold_map_v2.csv`) — final
 
-224 patients, 26 SSI. Every patient carried over from v1 keeps the same fold
-(asserted in code), `y_true` comes from the final list, and the three missing
-SSI patients were added to the fold with the fewest SSI events at the time of
-assignment (deterministic, lowest fold index breaks ties).
-
-| Fold | Patients | SSI |
-|---|---|---|
-| 0 | 45 | 7 |
-| 1 | 46 | 5 |
-| 2 | 45 | 4 |
-| 3 | 44 | 5 |
-| 4 | 44 | 5 |
-
-This is marked **interim** because the 67-patient thermal list
-(`thermal_patients_not_in_SHARED_fold_map_v1.csv`) has not been received. Those
-patients will be appended with the same seeded stratified procedure without
-moving any existing fold, and the file promoted to `SHARED_fold_map_v2.csv`.
+289 patients, 26 SSI, folds 58/59/58/57/57 and 7/5/4/5/5. Built in layers, none
+of which moves a patient already placed (asserted in code): 210 from the
+published smartphone master map (seed 42), 11 thermal-only from v1, 3 SSI
+patients with no images in the locked package, and 65 from the 2026-09-29
+thermal list by stratified assignment (seed 42). Two of that list's 67 IDs
+(RU-A1108, RU-A1195) were already in the map, so 65 were new; none of the 65 is
+SSI-positive. v1 and the interim file are superseded and kept for provenance.
 
 ### On rebalancing
 
-Under the final labels, v1's own 221 patients give 7/2/4/5/5. Adding the three
-missing SSI patients already lifts fold 1 from 2 to 5, giving 7/5/4/5/5, so the
-worst of the imbalance resolves without touching anyone's fold.
+Adding the three missing SSI patients already lifted fold 1 from 2 events to 5,
+giving 7/5/4/5/5, so the worst imbalance resolved without touching anyone's fold.
+**Do not rebalance further.** All metrics are computed on pooled out-of-fold
+predictions with patient-clustered bootstrap, not averaged per fold, so an uneven
+event split costs a little precision but does not bias the estimates. Rebalancing
+would move existing patients between folds and invalidate every trained model.
+Measured rework if it were done anyway: ResNet18 3 seeds ~1.4 h, EfficientNet-B0
+3 seeds ~3.2 h, ViT-B/16 3 seeds ~12 h, five masking conditions ~6 h, learning
+curve ~2.7 h — roughly 25 GPU-hours plus CPU analyses and repackaging.
 
-Recommendation: **do not rebalance further.** All reported metrics are computed on
-pooled out-of-fold predictions with patient-clustered bootstrap, not averaged per
-fold, so an uneven event split costs a little precision but does not bias the
-estimates. Rebalancing would move existing patients between folds and invalidate
-every trained model. Measured rework: ResNet18 3 seeds ~1.4 h, EfficientNet-B0 3
-seeds ~3.2 h, ViT-B/16 3 seeds ~12 h, five masking conditions ~6 h, learning
-curve ~2.7 h, totalling roughly 25 GPU-hours plus CPU analyses and repackaging,
-about 2-3 days wall-clock on the current hardware. If rebalancing is wanted
-anyway, it should happen once, now, before thermal training begins.
+## Paired comparisons under the final labels
+
+`paired_comparisons_final_labels.csv` — 210 patients, 20 events, 20,000-resample
+patient-clustered bootstrap, differences taken within each replicate.
+
+| Contrast | ΔAUROC (95% CI) | P | ΔAUPRC | P |
+|---|---|---|---|---|
+| Combined vs clinical | +0.135 (+0.037 to +0.253) | 0.005 | −0.024 | 0.83 |
+| Image vs clinical | +0.101 (−0.066 to +0.281) | 0.25 | −0.122 | 0.24 |
+| Combined vs image | +0.034 (−0.075 to +0.132) | 0.49 | +0.098 | 0.15 |
+
+Under the old labels the same contrasts were +0.048 (P=0.13) and +0.033 (P=0.69).
+
+**Do not report the P=0.005 as a finding.** It is partition-fragile, in exactly
+the way that exposed the earlier P=0.013 artifact. Repeating the whole nested-CV
+procedure under five cross-validation partitions
+(`paired_partition_stability.csv`):
+
+| CV seed | Clinical | Combined | Δ combined−clinical | P |
+|---|---|---|---|---|
+| 20260807 | 0.664 | 0.799 | +0.135 | 0.004 |
+| 42 | 0.648 | 0.770 | +0.122 | 0.018 |
+| 7 | 0.723 | 0.747 | +0.025 | 0.42 |
+| 2024 | 0.763 | 0.800 | +0.037 | 0.22 |
+| 1 | 0.735 | 0.783 | +0.048 | 0.12 |
+
+The contrast is significant in 2 of 5 partitions and ranges +0.025 to +0.135. The
+AUPRC difference points the other way in every specification. The defensible
+statement is unchanged from the old labels: **adding the image score to the
+clinical model does not produce a significant improvement at this event count.**
+
+## What drives the −0.083 clinical drop
+
+`clinical_drop_decomposition.csv`. Splitting the drop into an evaluation
+component (score the model refit on old labels against the final labels) and a
+refit component (refit on the final labels):
+
+| Step | AUROC | Δ |
+|---|---|---|
+| Refit old labels, scored old labels | 0.7466 | — |
+| Refit old labels, scored **final** labels | 0.7153 | −0.031 |
+| Refit **final** labels, scored final labels | 0.6641 | −0.051 |
+
+So roughly 38% of the drop is the two label flips and 62% is the refit.
+
+The flips are fully explained and split almost evenly: flipping RU-A1106 alone
+costs −0.016, flipping RU-A1107 alone −0.015, and the two together give −0.031,
+the entire evaluation component. The reason is that both flips move a patient to
+the wrong end of the clinical score distribution: RU-A1106 became SSI-positive
+and sits at the 19th percentile of clinical risk, while RU-A1107 became negative
+and sits at the 95th. With 20 events, two maximally adverse flips are worth about
+0.03 AUROC.
+
+**The refit component is not a stable quantity and should not be interpreted.**
+Under the final labels the clinical model's AUROC ranges 0.648–0.763 across five
+CV partitions — a spread of 0.114, larger than the 0.083 drop itself. Under the
+old labels the same spread was 0.017. The corrected labels make the refit markedly
+less stable, which is what you would expect when refitting eight covariates on
+210 patients after moving two of twenty events.
+
+**Answer to the question as posed:** it is mostly the refit, but the honest
+reading is that only the ~0.031 flip component is a real, attributable change.
+The remaining ~0.051 is inside partition noise and should be reported as such
+rather than as a degradation of the clinical model.
 
 ## Day-recovery clarifications
 

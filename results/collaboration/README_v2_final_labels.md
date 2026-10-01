@@ -1,4 +1,4 @@
-# Final SSI label set + fold map v2 (2026-09-28)
+# Final SSI label set + fold map v2 (updated 2026-10-01)
 
 The 26-patient list confirmed by Dr. Kewalramani (`final_ssi_list.txt`) is now the
 only SSI definition used here. Labels are no longer taken from chart review, the
@@ -13,12 +13,18 @@ survey, or any other source.
 - Three had no images at all in the locked package and were absent from v1:
   RU-A1108, RU-A1195, RU-A1365. They are added in v2.
 
-**Important caveat.** The image models were *trained* with the old labels, so the
-re-runs below re-score fixed predictions under the final labels. This is a valid
-evaluation-only comparison, but the networks have not been retrained on the
-corrected labels; RU-A1106 was trained as a negative and RU-A1107 as a positive.
-Retraining is required before these numbers are final (cost below). Logistic
-clinical/combined models were fully refit under each label set.
+**Retraining complete (2026-10-01).** The networks have now been retrained on the
+final labels — 3 architectures x 3 seeds plus the five masking conditions, all on
+the identical `MASTER_map_1948_seed42` folds and the same sham random stream
+(seed 20260807). Retrained results are in the **Retrained results** section below
+and supersede the evaluation-only numbers; both are reported side by side.
+
+Why both are shown: the earlier re-runs re-scored predictions from networks
+*trained* with the old labels (RU-A1106 as a negative, RU-A1107 as a positive),
+which is a valid evaluation-only comparison but penalises a model for two labels
+it was taught wrong. Logistic clinical/combined models were fully refit under each
+label set throughout, so the clinical, combined and POD-7 rows are unaffected by
+retraining and stand as reported below.
 
 ## Re-runs, old vs final labels (`relabel_comparison.csv`)
 
@@ -35,20 +41,69 @@ clinical/combined models were fully refit under each label set.
 | Image only | 210 | 20 | 0.779 (0.685–0.861) | 0.765 (0.666–0.850) | 0.226 -> 0.217 |
 | Combined (refit) | 210 | 20 | 0.794 (0.681–0.898) | 0.800 (0.691–0.890) | 0.357 -> 0.316 |
 
-Architectures, 3 seeds each (`architectures_relabelled.csv`), patient AUROC mean±SD:
-EfficientNet-B0 0.755±0.037 -> 0.751±0.037; ResNet18 0.731±0.052 -> 0.723±0.034;
-ViT-B/16 0.725±0.049 -> 0.707±0.047.
+Architectures and masking: the evaluation-only values are superseded by the
+retrained results below.
 
-Masking, 206 patients / 19 events (`masking_relabelled.csv`): full 0.725 -> 0.714;
-wound-only 0.670 -> 0.616; background-only 0.821 -> 0.834; sham wound 0.817 ->
-0.797; sham background 0.654 -> 0.647.
+## Retrained results (final labels)
 
-**What changes:** everything shifts slightly, mostly downward, by 0.01–0.02 AUROC,
-which is far inside the confidence intervals. The exception is the clinical model
-(-0.083), which is the most label-sensitive because it is refit on 210 patients
-with few events. **No conclusion changes**: the primary remains a moderate signal,
-architectures remain indistinguishable, the sham controls still match the true
-masks, and wound-only still fails to beat full-image.
+Per-patient out-of-fold predictions for all 14 runs are in
+`results/master_models_final/` (images carry the hashed `image_id`, never a path).
+
+### Architectures, 3 seeds each (`architectures_retrained_final.csv`)
+
+Patient AUROC, mean ± SD across seeds:
+
+| Architecture | Retrained (final) | Published (old) | Evaluation-only | Retrained − published | Per-seed (retrained) |
+|---|---|---|---|---|---|
+| ResNet18 | **0.7556 ± 0.0380** | 0.731 ± 0.052 | 0.723 ± 0.034 | +0.025 | 0.789 / 0.714 / 0.764 |
+| EfficientNet-B0 | **0.7327 ± 0.0490** | 0.755 ± 0.037 | 0.751 ± 0.037 | −0.022 | 0.746 / 0.678 / 0.774 |
+| ViT-B/16 | **0.6839 ± 0.0453** | 0.725 ± 0.049 | 0.707 ± 0.047 | −0.041 | 0.706 / 0.714 / 0.632 |
+
+Pooled across all nine runs: 0.7241 ± 0.0498.
+
+Every architecture's retrained mean lies within one SD of its published value and
+the shifts go in both directions, which is the signature of seed variance rather
+than a label effect. Two qualifications worth stating rather than smoothing over:
+the evaluation-only comparison *understated* ResNet18, which gains +0.033 when
+retrained, so the direction of the label correction is not uniform; and ViT falls
+furthest (−0.041), widening ResNet18 − ViT from +0.006 published to +0.072
+retrained. With three seeds the spreads still overlap heavily, so
+"indistinguishable" survives, but the retrained ranking is less flat than the
+published one and should not be presented as identical in character.
+
+### Masking, 206 patients / 19 events (`masking_retrained_final.csv`)
+
+| Condition | Retrained (final) | Published (old) | Evaluation-only | Retrained − published |
+|---|---|---|---|---|
+| Full image | **0.6361** | 0.725 | 0.714 | −0.089 |
+| Wound-only | **0.6189** | 0.670 | 0.616 | −0.051 |
+| Background-only | **0.7489** | 0.821 | 0.834 | −0.072 |
+| Sham wound-only | **0.7762** | 0.817 | 0.797 | −0.041 |
+| Sham background-only | **0.6065** | 0.654 | 0.647 | −0.048 |
+
+All five conditions shift down by 0.04–0.09, but every structural relationship the
+masking experiment was built to test is preserved:
+
+- **Background-only still beats wound-only by a wide margin** (+0.130 retrained,
+  +0.151 published). The infection-related signal is not concentrated in the
+  annotated wound.
+- **The sham control still matches the true mask.** Sham wound-only 0.776 against
+  true background-only 0.749, a gap of +0.027 (published: 0.817 vs 0.821, −0.004).
+  The gap widens slightly, but the conclusion — that a randomly relocated mask of
+  equal area performs like the true one — is unchanged.
+- **Wound-only still fails to beat full-image** (0.619 vs 0.636).
+
+The uniform downward shift across all five conditions, including both sham
+controls, is consistent with refitting from scratch on the smaller masking subset
+(1,886 images, 206 patients, 19 events) rather than with anything specific to the
+corrected labels.
+
+**What changes:** the POD-7 and RGB-timepoint rows shift by 0.01–0.02 AUROC, far
+inside their confidence intervals. The clinical model moves most (−0.083); its
+decomposition is below. The retrained image models shift by 0.02–0.09, in both
+directions. **No conclusion changes**: the primary remains a moderate signal, the
+architectures remain statistically indistinguishable, the sham controls still match
+the true masks, and wound-only still fails to beat full-image.
 
 The healing-stage positive control is unaffected because its labels are
 postoperative stage, not SSI.

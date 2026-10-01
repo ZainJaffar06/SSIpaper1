@@ -184,11 +184,20 @@ and sits at the 95th. With 20 events, two maximally adverse flips are worth abou
 0.03 AUROC.
 
 **The refit component is not a stable quantity and should not be interpreted.**
-Under the final labels the clinical model's AUROC ranges 0.648–0.763 across five
-CV partitions — a spread of 0.114, larger than the 0.083 drop itself. Under the
-old labels the same spread was 0.017. The corrected labels make the refit markedly
-less stable, which is what you would expect when refitting eight covariates on
-210 patients after moving two of twenty events.
+Repeating the whole nested-CV procedure under five CV partitions for *both* label
+sets (`clinical_partition_stability_matched.csv`):
+
+| Label set | Per-partition clinical AUROC | Range | SD |
+|---|---|---|---|
+| Old | 0.7466 / 0.7509 / 0.7342 / 0.7718 / 0.7711 | 0.038 | 0.016 |
+| Final | 0.6641 / 0.6482 / 0.7225 / 0.7626 / 0.7353 | **0.114** | 0.049 |
+
+The final-label range is 3x the old-label range and wider than the 0.083 drop
+itself. The corrected labels make the refit markedly less stable, which is what you
+would expect when refitting eight covariates on 210 patients after moving two of
+twenty events. Both label sets are evaluated on the same five partitions here; an
+earlier draft compared a five-partition range against a three-partition one, which
+understated the old-label spread.
 
 **Answer to the question as posed:** it is mostly the refit, but the honest
 reading is that only the ~0.031 flip component is a real, attributable change.

@@ -1,0 +1,4 @@
+contrast,d_auroc,lo,hi,p
+image adds to clinical,0.0665,-0.0219,0.1769,0.1646
+image adds to clinical + BMI,0.0349,-0.0681,0.1521,0.5508
+BMI adds to clinical,-0.032,-0.1263,0.0581,0.4948

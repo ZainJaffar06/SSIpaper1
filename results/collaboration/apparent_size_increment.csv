@@ -1,0 +1,4 @@
+contrast,d_auroc,lo,hi,p
+image adds to clinical,0.0878,-0.0034,0.2035,0.063
+image adds to clinical + apparent size,0.0321,-0.1047,0.1619,0.6337
+apparent size adds to clinical,0.0408,-0.0118,0.1085,0.1562

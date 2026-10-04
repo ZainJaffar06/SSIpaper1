@@ -1,0 +1,5 @@
+contrast,d_auroc,lo,hi,p
+image adds to clinical v2,-0.0032,-0.0368,0.0341,0.8158
+image adds to clinical v1,0.0373,-0.1134,0.1715,0.5686
+clinical v2 vs clinical v1,0.0219,-0.1048,0.153,0.7271
+clinical v2 vs image alone,-0.0797,-0.2252,0.0543,0.2469

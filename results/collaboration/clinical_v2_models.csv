@@ -1,0 +1,6 @@
+model,n_pts,n_events,auroc,lo,hi,auprc
+clinical v2 (requested 5),200,17,0.7049,0.5405,0.8488,0.2026
+clinical v1 (8 intraop),200,17,0.6831,0.5222,0.8324,0.2617
+image only,200,17,0.7846,0.6599,0.8885,0.2718
+clinical v2 + image,200,17,0.7017,0.5245,0.8578,0.2292
+clinical v1 + image,200,17,0.7203,0.5546,0.8643,0.2347

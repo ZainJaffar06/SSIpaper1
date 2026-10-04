@@ -30,9 +30,9 @@ retraining and stand as reported below.
 
 | Analysis | Patients | Events | AUROC old (95% CI) | AUROC final (95% CI) | AUPRC old -> final |
 |---|---|---|---|---|---|
-| POD-7 primary (mean) | 193 | 15 | 0.761 (0.645–0.860) | **0.744 (0.629–0.846)** | 0.172 -> 0.162 |
-| POD-7 latest photo | 193 | 15 | 0.746 (0.635–0.844) | 0.742 (0.632–0.841) | 0.162 -> 0.158 |
-| POD-7 closest photo | 193 | 15 | 0.744 (0.646–0.833) | 0.752 (0.657–0.842) | 0.157 -> 0.161 |
+| POD-7 primary (mean) † | 193 / 15 -> 192 / 14 | | 0.761 (0.645–0.860) | **0.754 (0.632–0.861)** | 0.172 -> 0.162 |
+| POD-7 latest photo † | 193 / 15 -> 192 / 14 | | 0.746 (0.634–0.847) | 0.737 (0.620–0.844) | 0.162 -> 0.150 |
+| POD-7 closest photo † | 193 / 15 -> 192 / 14 | | 0.744 (0.646–0.834) | 0.748 (0.644–0.843) | 0.157 -> 0.153 |
 | RGB pre-closure | 139 | 14 | 0.706 (0.593–0.810) | 0.705 (0.593–0.809) | 0.173 -> 0.173 |
 | RGB post-closure | 153 | 16 | 0.786 (0.685–0.873) | **0.763 (0.659–0.857)** | 0.245 -> 0.231 |
 | RGB pre+post mean | 131 | 12 | 0.775 (0.661–0.872) | 0.757 (0.636–0.865) | 0.197 -> 0.190 |
@@ -40,6 +40,44 @@ retraining and stand as reported below.
 | Clinical (intraop, refit) | 210 | 20 | 0.747 (0.605–0.874) | **0.664 (0.494–0.813)** | 0.387 -> 0.340 |
 | Image only | 210 | 20 | 0.779 (0.685–0.861) | 0.765 (0.666–0.850) | 0.226 -> 0.217 |
 | Combined (refit) | 210 | 20 | 0.794 (0.681–0.898) | 0.800 (0.691–0.890) | 0.357 -> 0.316 |
+
+† **Corrected 2026-10-03 — the POD-7 risk set changes under the final labels.**
+An earlier version of this table reported the final-label POD-7 rows on the *old*
+risk set (193 patients / 15 events), giving 0.744 / 0.742 / 0.752. That was wrong.
+
+The POD-7 landmark estimand admits a patient only if they can be shown to have been
+still undiagnosed at day 7, so it excludes anyone diagnosed on or before POD 7 and
+any SSI-positive patient whose diagnosis day is unknown. **RU-A1106 flips to
+SSI-positive under the final labels and has no recorded diagnosis day**, so it must
+leave the risk set: 193 / 15 becomes 192 / 14. Re-scoring the old risk set under new
+labels silently kept a patient the estimand excludes.
+
+The corrected values are above. The implementation reproduces all three published
+old-label variants exactly (0.7607 / 0.7461 / 0.7442 against the published 0.761 /
+0.746 / 0.744), with a patient set and per-patient image counts identical to
+`results/canonical/primary_pod7_patient_scores.csv` and `score_mean` matching it to
+six decimals.
+
+### POD-7 with the retrained networks (final labels, 192 / 14)
+
+The rows above use the locked primary model, whose weights are unchanged — only the
+labels moved — so they are the like-for-like old-vs-final comparison. The locked
+primary's exact architecture is not recorded in the 2026-08-07 package and none of
+the nine retrained runs reproduces its predictions (correlation 0.42–0.60), so a
+drop-in retrained primary does not exist. Scoring the same risk set with the
+nine-run retrained ensemble instead gives:
+
+| Variant | Retrained ensemble (final labels) | AUPRC |
+|---|---|---|
+| mean | **0.792 (0.653–0.903)** | 0.279 |
+| latest | 0.800 (0.667–0.911) | 0.259 |
+| closest | 0.821 (0.703–0.921) | 0.293 |
+
+These are higher than the locked primary throughout, which is expected from
+averaging nine models rather than evidence that the labels improved anything. Use
+the locked-primary rows for the old-vs-final comparison and the ensemble rows for
+fusion, where a stable per-patient score matters more than comparability.
+Per-patient out-of-fold predictions: `pod7_retrained_final_patient_oof.csv`.
 
 Architectures and masking: the evaluation-only values are superseded by the
 retrained results below.
@@ -203,6 +241,171 @@ understated the old-label spread.
 reading is that only the ~0.031 flip component is a real, attributable change.
 The remaining ~0.051 is inside partition noise and should be reported as such
 rather than as a degradation of the clinical model.
+
+## A real clinical comparator (`clinical_v2_models.csv`, `clinical_v2_contrasts.csv`)
+
+The published clinical model uses eight intraoperative variables and none of the
+standard preoperative SSI risk factors, so "the photograph adds little beyond
+clinical data" was being tested against a weak comparator. The Bluebelle
+demographics tracker (offline, carries direct identifiers) supplies the missing
+fields. A five-variable model was built from the established predictors:
+**BMI, CDC wound classification, lowest intraoperative temperature, smoking status
+and diabetes.** 200 patients / 17 events — the 10 patients absent from the tracker
+drop out, which costs 3 events relative to the main cohort.
+
+Coverage: wound class 199/200, diabetes 199/200, smoking 198/200, BMI 187/200,
+nadir temperature 154/200. Smoking coded Never/Former/Current as 0/1/2; diabetes as
+any-versus-none; wound class as the ordinal CDC class 1–4; BMI range-checked 12–80
+and temperature 30–43 °C.
+
+| Model | AUROC (95% CI) | AUPRC |
+|---|---|---|
+| clinical v2 (the five above) | 0.705 (0.541–0.849) | 0.203 |
+| clinical v1 (eight intraoperative) | 0.683 (0.522–0.832) | 0.262 |
+| image only | **0.785 (0.660–0.889)** | 0.272 |
+| clinical v2 + image | 0.702 (0.524–0.858) | 0.229 |
+| clinical v1 + image | 0.720 (0.555–0.864) | 0.235 |
+
+| Contrast | ΔAUROC (95% CI) | P |
+|---|---|---|
+| **image adds to clinical v2** | **−0.003 (−0.037 to +0.034)** | **0.816** |
+| image adds to clinical v1 | +0.037 (−0.113 to +0.171) | 0.569 |
+| clinical v2 vs clinical v1 | +0.022 (−0.105 to +0.153) | 0.727 |
+| clinical v2 vs image alone | −0.080 (−0.225 to +0.054) | 0.247 |
+
+### What this changes
+
+**The central claim gets stronger, not weaker.** Against the better comparator the
+photograph's increment is −0.003 (P=0.82) — indistinguishable from zero, and tighter
+than the +0.037 it showed against the intraoperative-only model. The obvious reviewer
+objection, that the clinical comparator was a strawman, no longer applies.
+
+**Almost all of the clinical signal is one variable.** Univariate patient-level AUROC:
+
+| Variable | AUROC alone |
+|---|---|
+| **CDC wound class** | **0.734** |
+| Lowest intraoperative temperature | 0.593 |
+| BMI | 0.555 |
+| Smoking | 0.480 |
+| Diabetes | 0.458 |
+
+CDC wound class alone (0.734) essentially reproduces the whole five-variable model
+(0.705) and beats the entire eight-variable intraoperative model (0.683). It was
+already parsed into the analysis frame and never used as a covariate. Smoking and
+diabetes fall below 0.5, i.e. no signal in this cohort at 17 events.
+
+**The image is not worse than clinical data — it is redundant with it.** Image alone
+(0.785) numerically exceeds clinical v2 (0.705), and that difference is not
+significant either (P=0.25). The defensible statement is that a single photograph
+carries infection-related information of broadly similar magnitude to a standard
+clinical risk set, but almost nothing the clinical variables do not already carry.
+
+### Limits
+
+Every interval here is wide and nothing is significant; 17 events cannot separate
+these models. The combined models are *lower* than image alone (0.702 and 0.720
+versus 0.785), which is refit instability, not evidence that clinical data harms
+prediction — "image only" is a fixed score while the combined rows are logistic
+models estimated on 17 events. Nadir temperature is missing for 23% of the cohort.
+And because wound class carries the clinical model almost single-handedly, clinical
+v2 is close to a wound-class model with four noisy additions.
+
+## Apparent incision size: a measurable stand-in for body habitus
+
+Requested as a BMI analysis. BMI was located on 2026-10-03 in the Bluebelle
+demographics tracker (offline; that file carries direct identifiers and is never
+committed). It covers 187 of the 210 smartphone patients, 15 events, median 27.8
+(IQR 24.6–31.4), range-checked to 12–80 — the two implausible values (2.0, 221.0)
+came from rows with no subject ID and no real patient was affected.
+
+### BMI does not explain the RGB signal (`bmi_increment.csv`)
+
+| | |
+|---|---|
+| BMI vs image score | Pearson −0.009 (P=0.90), Spearman −0.070 (P=0.34) |
+| BMI vs SSI | median 28.4 (SSI+) vs 27.8 (SSI−), P=0.45; BMI alone AUROC 0.559 |
+| BMI vs apparent incision size | Spearman +0.136 (P=0.066) |
+
+| Model (187 pts / 15 ev) | AUROC |
+|---|---|
+| clinical | 0.7510 |
+| clinical + BMI | 0.7190 |
+| clinical + image | 0.8174 |
+| clinical + BMI + image | 0.7539 |
+
+| Contrast | ΔAUROC (95% CI) | P |
+|---|---|---|
+| image adds to clinical | +0.067 (−0.022 to +0.177) | 0.165 |
+| image adds to clinical + BMI | +0.035 (−0.068 to +0.152) | 0.551 |
+| BMI adds to clinical | −0.032 (−0.126 to +0.058) | 0.494 |
+
+**BMI contributes nothing here and does not mediate the image signal.** The image
+increment does fall from +0.067 to +0.035 once BMI is included, but that is not
+mediation: BMI's correlation with the image score is −0.009, so there is no pathway
+for it to absorb anything. Adding a ninth covariate at 15 events degrades every model
+it touches — note that clinical + BMI is *worse* than clinical alone. The drop is an
+overfitting artifact.
+
+This is the key contrast with apparent incision size below, which **does** correlate
+with the image score (Spearman +0.216, P=0.002) and therefore has a plausible
+mechanism when it absorbs the increment. Body habitus is not what the model responds
+to; how the photograph was framed is.
+
+Separately, the quantity actually observed is also measurable: how large the incision
+appears in the photograph. From the incision annotations, apparent incision size is
+the fraction of the 224x224 frame occupied by the dilated incision mask
+(`apparent_incision_size_patient_table.csv`, 206 patients / 19 events, the same
+cohort as the masking experiment).
+
+### The direction is the opposite of the thermal observation
+
+| Group | Median apparent incision size |
+|---|---|
+| SSI-positive (n=19) | 0.0871 |
+| SSI-negative (n=187) | 0.0687 |
+
+In the RGB photographs the incision appears **larger**, not smaller, in SSI patients
+(Mann-Whitney P=0.078; standalone AUROC 0.62 in the larger-is-higher-risk
+direction). This does not contradict the thermal observation — different modality,
+different framing — but the RGB data do not reproduce it, so it should not be
+presented as a cross-modality finding.
+
+### Most of the image model's increment is explained by apparent size
+
+Nested CV, same protocol as the clinical/combined analysis, 20,000-resample paired
+patient bootstrap (`apparent_size_increment.csv`):
+
+| Model | AUROC |
+|---|---|
+| clinical | 0.6426 |
+| clinical + apparent size | 0.6834 |
+| clinical + image | 0.7304 |
+| clinical + apparent size + image | 0.7155 |
+
+| Contrast | ΔAUROC (95% CI) | P |
+|---|---|---|
+| image adds to clinical | +0.088 (−0.003 to +0.203) | 0.063 |
+| **image adds to clinical + apparent size** | **+0.032 (−0.105 to +0.162)** | **0.634** |
+| apparent size adds to clinical | +0.041 (−0.012 to +0.108) | 0.156 |
+
+Once apparent incision size is in the model, the image score's increment falls from
++0.088 to +0.032 and its P-value goes from 0.063 to 0.634. A substantial part of
+what the photograph contributes beyond clinical data is therefore attributable to how
+large the incision appears in the frame — a property of framing and camera distance
+as much as of anatomy. That is consistent with the rest of this audit: background
+pixels outperform the wound, and a randomly relocated sham mask performs like the
+true one.
+
+Three honest limits. The quantity being reduced (+0.088) was not itself significant,
+so this is a shift in a noisy estimate rather than the removal of an established
+effect. Adding a tenth covariate at 19 events costs something on its own — the
+four-way model is *lower* than clinical + image (0.7155 vs 0.7304), which is
+overfitting, not signal. And apparent size conflates true incision length, body
+habitus and photographic framing; it is a stand-in for none of them individually,
+and notably true incision length (`incision_cm`) has essentially no correlation with
+the image score at all (Spearman +0.009, P=0.92), while apparent size does
+(Spearman +0.216, P=0.002).
 
 ## Day-recovery clarifications
 

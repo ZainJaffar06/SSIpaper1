@@ -226,6 +226,7 @@ RU-A1251,2,1,26,28.0,smartphone_master_seed42
 RU-A1252,2,0,40,42.0,smartphone_master_seed42
 RU-A1254,3,0,9,4.0,smartphone_master_seed42
 RU-A1255,1,0,18,14.0,smartphone_master_seed42
+RU-A1256,2,0,0,,aws_thermal_recovery_2026-10-01_least_loaded_fold
 RU-A1257,0,0,5,7.0,smartphone_master_seed42
 RU-A1258,0,0,5,3.0,smartphone_master_seed42
 RU-A1259,3,0,3,3.0,smartphone_master_seed42
@@ -271,9 +272,12 @@ RU-A1326,1,0,0,,thermal_list_2026-09-29_stratified_seed42
 RU-A1327,0,0,0,,thermal_list_2026-09-29_stratified_seed42
 RU-A1334,4,0,0,,thermal_list_2026-09-29_stratified_seed42
 RU-A1337,3,0,0,,thermal_list_2026-09-29_stratified_seed42
+RU-A1339,0,0,0,,aws_thermal_recovery_2026-10-01_least_loaded_fold
 RU-A1340,2,0,0,,thermal_list_2026-09-29_stratified_seed42
 RU-A1341,1,0,0,,thermal_list_2026-09-29_stratified_seed42
+RU-A1342,4,0,0,,aws_thermal_recovery_2026-10-01_least_loaded_fold
 RU-A1343,4,0,0,,thermal_list_2026-09-29_stratified_seed42
+RU-A1344,3,0,0,,aws_thermal_recovery_2026-10-01_least_loaded_fold
 RU-A1345,1,1,4,4.0,smartphone_master_seed42
 RU-A1347,0,1,2,1.0,smartphone_master_seed42
 RU-A1348,0,0,0,,thermal_list_2026-09-29_stratified_seed42

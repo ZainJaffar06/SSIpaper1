@@ -311,6 +311,41 @@ models estimated on 17 events. Nadir temperature is missing for 23% of the cohor
 And because wound class carries the clinical model almost single-handedly, clinical
 v2 is close to a wound-class model with four noisy additions.
 
+## Where each manuscript number comes from
+
+Added 2026-10-13 so the revised manuscript can be checked against source files directly.
+
+| Manuscript item | Value | File |
+|---|---|---|
+| POD-7 primary AUROC / AUPRC | 0.754 (0.632–0.861) / 0.162 (0.087–0.318) | computed in `src/09_packaging` from `results/canonical/primary_pod7_patient_scores.csv` under the final labels; risk set 192/14 |
+| POD-7 calibration | Brier 0.070, slope 0.673, intercept −0.788 | `calibration_pod7_final_labels.csv` |
+| POD-7 operating points | 80% spec: sens 0.643, flagged 0.234 | `operating_points_pod7_final_labels.csv` |
+| Architectures, 3 seeds | ResNet18 0.756±0.038, EffB0 0.733±0.049, ViT 0.684±0.045 | `architectures_retrained_final.csv` |
+| Learning curve | 0.607±0.053 / 0.743±0.023 / 0.733±0.049 | `learning_curve_final_summary.csv`, per-seed in `learning_curve_final.csv` |
+| Masking conditions | 0.636 / 0.619 / 0.749 / 0.776 / 0.607 | `masking_retrained_final.csv` |
+| Masking paired contrasts | shifted − true wound +0.157 (+0.033 to +0.283), P=0.0135 | `masking_contrasts_final.csv` |
+| Sham-contrast robustness | bootstrap P 0.011–0.013; leave-one-out P<0.05 in 206/206 | `sham_contrast_loo_influence.csv` |
+| Context probes, masking frame | 0.641 / 0.683 / 0.679 / 0.727 | `context_probes_masking_frame_final.csv` |
+| Context probes, full frame | +0.078 image (P=0.004), +0.080 patient (P=0.12) | `results/.../task6_cnn_vs_probe_paired.csv` (unchanged analysis, old labels) |
+| Clinical / image / stacked, full cohort | 0.664 / 0.765 / 0.800; Δ +0.135 (P=0.005) | `relabel_comparison.csv`, `paired_comparisons_final_labels.csv` |
+| Partition fragility of that Δ | +0.025 to +0.135, significant 2 of 5 | `paired_partition_stability.csv` |
+| Clinical-drop decomposition | −0.031 evaluation, −0.051 refit | `clinical_drop_decomposition.csv`, `clinical_partition_stability_matched.csv` |
+| Clinical comparator v2 | 0.705; image increment −0.003 (P=0.82) | `clinical_v2_models.csv`, `clinical_v2_contrasts.csv` |
+| Apparent incision size | increment falls +0.088 → +0.032 | `apparent_size_increment.csv`, `apparent_incision_size_patient_table.csv` |
+| BMI | r = −0.009 with the image score | `bmi_increment.csv` |
+
+**Not recomputed.** The supplementary serial-model paragraph remains on the original
+labels: its feature specification is not recorded here, and reconstructing it risks the
+implementation mismatch quantified for the context probes (±0.016). The quality-gate
+passage percentages (56% / 60%) are also label-dependent but cannot be recomputed —
+there is no exclusion-reason field in either frame and the pre-gate submission set is not
+in this repository.
+
+**Superseded.** An earlier calibration recompute used probability-scale Platt scaling on a
+fresh fold split and is wrong; the published method is logit-scale Platt on the locked
+folds, with operating points taken from raw out-of-fold scores. Only the files named above
+reflect the correct method.
+
 ## Apparent incision size: a measurable stand-in for body habitus
 
 Requested as a BMI analysis. BMI was located on 2026-10-03 in the Bluebelle

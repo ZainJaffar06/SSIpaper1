@@ -18,11 +18,24 @@ Cohort: 1,948 quality-gated photographs, 210 patients, 20 SSI events (9.5%).
 | **Primary:** POD-7 landmark, patients undiagnosed by day 7 (193 pts / 15 events) | AUROC **0.761** (95% CI 0.645–0.860), AUPRC 0.172 (0.095–0.320) |
 | Leak sensitivity (pre-diagnosis images only, 204 pts / 18 events) | Paired Δ +0.007 (−0.011 to +0.025), P=0.44 |
 | Architectures, 3 seeds each on identical folds | EfficientNet-B0 0.755±0.037 · ResNet18 0.731±0.052 · ViT-B/16 0.725±0.049 (no significant differences) |
-| Context-only model (timing + acquisition + behavior, no wound pixels) | Δ vs image model −0.009±0.052 |
+| Context-only model (timing + acquisition + behavior, no wound pixels) | 0.678 image / 0.700 patient; Δ vs locked CNN +0.078 image (P=0.004), +0.080 patient (P=0.12); seed-aware −0.009±0.052 (see note) |
 | Masking with sham controls (206 pts / 19 events) | Sham wound 0.817 ≈ true background 0.821 (P=0.94); sham-vs-true mask IoU median 0.000 |
 | Healing-stage positive control, same photographs | AUROC ≈0.975 (vs ≈0.755 for SSI) |
 | Clinical vs image vs combined (range-checked, full cohort) | 0.747 / 0.779 / 0.794; combined vs clinical +0.048, P=0.14 |
 | Clinician panel (15 raters) | Fleiss κ = 0.105 (exploratory) |
+
+**Note on the context-only row.** Two comparisons are reported because they differ and
+both matter. Against the single locked CNN prediction, the image model beats the full
+context probe by +0.078 at image level (P=0.004) and +0.080 at patient level (P=0.12)
+(`task6_cnn_vs_probe_paired.csv`). Averaged across ResNet seeds instead, CNN minus
+context is −0.009±0.052 — indistinguishable from zero, because the between-seed spread
+exceeds the difference (`docs/ROUND3_SUMMARY.md`). The seed-aware comparison is the
+fairer one, since any single CNN run is one draw from a distribution with that spread.
+But it should not be quoted as though the two models had equal AUROC: they do not, the
+context probe being 0.700 at patient level against roughly 0.78 for the image model.
+The defensible claim is that the gap is small relative to seed variance, not that
+context matches the image model. An earlier version of this table quoted only the
+seed-aware figure, which overstated the finding.
 
 Taken together, the results are consistent with an information limit in single RGB photographs rather than a model-capacity limit.
 

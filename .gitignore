@@ -17,3 +17,19 @@ logs_*.txt
 __pycache__/
 .DS_Store
 node_modules/
+
+# Collaborator-only clinical extracts: shared via Teams, never committed.
+# Study-code-level but derived from an identifier-bearing source tracker,
+# and Dr. Babaei asked for these to stay out of the repository.
+SHARE_*
+*clinical_variables_by_study_code*
+*demographics_tracker*
+*Bluebelle*
+*DEMO*.csv
+
+# Identifier-bearing or near-identifier source extracts (belt and braces;
+# OFFLINE_* above already covers the agreed naming convention)
+*exif*
+*surgery_dates*
+*image_id_mapping*
+*DO_NOT_COMMIT*

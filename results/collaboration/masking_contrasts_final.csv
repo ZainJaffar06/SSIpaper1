@@ -1,0 +1,6 @@
+contrast,d,lo,hi,p
+shifted - true wound,0.1573,0.0328,0.2828,0.0135
+shifted - true background,0.0273,-0.1782,0.2422,0.8014
+true background - full,0.1129,-0.0499,0.2718,0.167
+true wound - full,-0.0172,-0.1927,0.167,0.8354
+shifted complement - full,-0.0296,-0.0912,0.029,0.3321

@@ -1,0 +1,6 @@
+condition,auroc,lo,hi
+Full image,0.6361,0.4859,0.7722
+True wound-only,0.6189,0.47,0.7566
+True background-only,0.7489,0.6003,0.876
+Circularly shifted wound-size region,0.7762,0.627,0.9034
+Complement of shifted region,0.6065,0.4554,0.75

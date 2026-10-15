@@ -1,0 +1,6 @@
+condition,published_single_run,seed42,seed7,seed_mean,seed_sd,lo,hi
+Full image,0.6361,0.7042,0.6738,0.689,0.0215,0.5511,0.8109
+True wound-only,0.6189,0.6972,0.6496,0.6734,0.0336,0.54,0.7922
+True background-only,0.7489,0.7354,0.7748,0.7551,0.0279,0.6285,0.864
+Circularly shifted wound-size region,0.7762,0.8204,0.7827,0.8016,0.0267,0.6676,0.9137
+Complement of shifted region,0.6065,0.7157,0.6876,0.7017,0.0199,0.5751,0.8141

@@ -510,3 +510,57 @@ validation before this is used in the manuscript.
   specification is not recoverable from the repository.
 - Intraoperative antibiotic exposure was recorded for 92 of 210 patients and is
   not tabulated in Table 1.
+
+---
+
+## Item 3 complete: two-seed masking rerun (2026-10-15)
+
+50 folds / 10 condition-seeds / 17.7 h compute. Seeds 42 and 7.
+Sources: `masking_multiseed_absolute.csv`, `masking_multiseed_contrasts.csv`.
+
+| Condition | Locked single run | Seed 42 | Seed 7 | Mean within-seed (95% CI) |
+|---|---|---|---|---|
+| Full image | 0.636 | 0.704 | 0.674 | 0.689 (0.551–0.811) |
+| True wound-only | 0.619 | 0.697 | 0.650 | 0.673 (0.540–0.792) |
+| True background-only | 0.749 | 0.735 | 0.775 | 0.755 (0.628–0.864) |
+| Shifted wound-size region | 0.776 | 0.820 | 0.783 | 0.802 (0.668–0.914) |
+| Complement of shifted region | 0.607 | 0.716 | 0.688 | 0.702 (0.575–0.814) |
+
+| Contrast | Locked | Seed 42 | Seed 7 | Mean within-seed (95% CI) | P |
+|---|---|---|---|---|---|
+| Shifted − true wound | +0.157 | +0.123 | +0.133 | **+0.128 (+0.012 to +0.242)** | **0.031** |
+| Shifted − true background | +0.027 | +0.085 | +0.008 | +0.046 (−0.101 to +0.201) | 0.538 |
+| True background − full | +0.113 | +0.031 | +0.101 | +0.066 (−0.052 to +0.188) | 0.266 |
+| True wound − full | −0.017 | −0.007 | −0.024 | −0.016 (−0.126 to +0.096) | 0.776 |
+| Complement − full | −0.030 | +0.011 | +0.014 | +0.013 (−0.040 to +0.085) | 0.756 |
+
+Holm(m=5) on the smallest: **0.154** (locked run: 0.068). No contrast survives
+family-wise correction. The headline contrast replicates in direction and
+magnitude and is seed-stable.
+
+**ESTIMAND NOTE — do not use score-averaging here.** The reported "mean
+within-seed" averages the quantity computed separately inside each seed, so
+pairing stays within a seed. Averaging *scores* across seeds first produces a
+different (ensemble) model that behaves unlike either member: true-wound-only
+rises to 0.726, above both seeds, because averaging reduces variance, and the
+headline contrast would be reported as +0.085 (P=0.144) — understating an effect
+that is consistent at +0.123/+0.133 in the two runs. See
+`recompute_masking_perseed.py` (correct) versus `recompute_masking_multiseed.py`
+(ensemble, superseded).
+
+**Manuscript placement.** The locked single run remains the pre-specified primary
+in Supplementary Table S4; the rerun is reported as Supplementary Table S9. The
+primary estimand was deliberately NOT swapped — replacing a locked analysis with a
+better-looking rerun post hoc is estimand shopping.
+
+Rounding convention: stored 0.6065 and 0.0135 are reported in the manuscript as
+0.607 and 0.013; keep that convention when quoting them.
+
+## Shortcut-learning references added (2026-10-15)
+
+The manuscript previously cited none. Added as [17]–[21], all author lists verified
+against source: Geirhos (Nat Mach Intell 2020;2:665–673), DeGrave (Nat Mach Intell
+2021;3:610–619), Zech (PLoS Med 2018;15(11):e1002683), Badgeley (npj Digit Med
+2019;2:31), Ong Ly (npj Digit Med 2024;7:124). Badgeley is the closest published
+analogue to the regional confound: balancing the test set on confounders reduced
+performance to chance (AUC 0.52).

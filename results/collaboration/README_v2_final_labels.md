@@ -464,3 +464,49 @@ POD-dependent analyses, so nothing changes.
   from their own capture time, after precedence. A filename day number outranks
   EXIF, so the 49 frame images carrying an explicit day were resolved by that
   rule even where EXIF also existed.
+
+---
+
+## Round 4 additions (2026-10-14)
+
+Response to the nine review items. Number-to-file traceability as before.
+
+| Manuscript number | Source file |
+|---|---|
+| Table 1, all baseline rows | `baseline_table1.csv` |
+| Table 1, incision-region row (137 chest / 61 abdomen) | `baseline_table1_patient_level.csv`, derived by `region_rules.py` |
+| Full-frame context probe 0.685 (image) / 0.731 (patient) | `work/logs_item1.txt`, FINAL-labels block |
+| CNN − combined probe +0.064 (P=0.010) image, +0.034 (P=0.47) patient | `work/logs_item1.txt`, FINAL-labels block |
+| Holm-adjusted P 0.068 across five contrasts | `masking_contrasts_final.csv` (5 rows; Holm over m=5) |
+| Supplementary Table S4 fifth row, −0.030 (−0.091 to +0.029), P=0.33 | `masking_contrasts_final.csv`, `shifted complement - full` |
+| Supplementary Table S8, SurgWound by target/architecture | `surgwound_results.xlsx`, sheet `by_model` |
+| SurgWound context probe 0.599 (0.539–0.658); CNN − context +0.116 to +0.162 | `surgwound_results.xlsx`, sheet `context_vs_image` |
+| SurgWound published-partition 0.770–0.794 | `surgwound_results.xlsx`, sheet `official_split` |
+
+### Incision-region confounding check (not yet in the manuscript)
+
+`region_confound.csv`. Incision region derived from the free-text operative
+description by the prespecified rule in `region_rules.py`; 198 of 210 patients
+classifiable, zero ambiguous.
+
+| Quantity | AUROC (95% CI) |
+|---|---|
+| Incision region alone | 0.750 (0.633–0.851) |
+| CNN score discriminating region, **SSI-negative patients only** | 0.892 (0.832–0.943) |
+| CNN pooled | 0.785 (0.642–0.903) |
+| CNN region-stratified (discordant-pair weighted) | 0.664 (0.473–0.829) |
+| Pooled − stratified | +0.120 (+0.012 to +0.248), P=0.028 |
+
+SSI rate 2.9% (4/137) chest versus 21.3% (13/61) abdomen. Within-stratum event
+counts are 4 and 13, so the stratum-specific intervals are wide and the chest
+estimate is uninformative on its own. The region labels need clinical
+validation before this is used in the manuscript.
+
+### Notes
+
+- The masking three-seed rerun (review item 3) is still running; `masking_absolute_with_ci.csv`
+  and `masking_contrasts_final.csv` remain the single-run values.
+- The serial-analysis section was removed from the manuscript; its feature
+  specification is not recoverable from the repository.
+- Intraoperative antibiotic exposure was recorded for 92 of 210 patients and is
+  not tabulated in Table 1.

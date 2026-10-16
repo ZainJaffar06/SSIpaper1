@@ -14,7 +14,12 @@ Demographics,,,
    Hispanic or Latino,2 (12%),23 (13%),
    Not Hispanic or Latino,15 (88%),158 (86%),
    More than one,0 (0%),2 (1%),
-   Skin tone (Fitzpatrick / MST),Not collected,Not collected,210 (100%)
+   Fitzpatrick skin type,,,142 (68%)
+   I,1 (20%),26 (41%),
+   II,2 (40%),21 (33%),
+   III,1 (20%),11 (17%),
+   IV,1 (20%),3 (5%),
+   V,0 (0%),2 (3%),
 Comorbidities and risk factors,,,
 "   Body mass index, kg/m²",31.4 ± 10.7,28.2 ± 5.2,23 (11%)
    Smoking status,,,12 (6%)

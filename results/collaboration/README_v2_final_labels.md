@@ -564,3 +564,32 @@ against source: Geirhos (Nat Mach Intell 2020;2:665–673), DeGrave (Nat Mach In
 2019;2:31), Ong Ly (npj Digit Med 2024;7:124). Badgeley is the closest published
 analogue to the regional confound: balancing the test set on confounders reduced
 performance to chance (AUC 0.52).
+
+## CORRECTION: Fitzpatrick skin type is partly available (2026-10-15)
+
+An earlier note in this file said skin tone was not collected. That was wrong.
+`Fitzpatrick_Type` is populated in `SSI_Annotation_Progress_Tracker_Allie.xlsx`
+(sheet "Progress Tracker"): 1,192 of 3,327 image rows, on a subdivided scale
+(IA/IB/IC … VA/VB, plus one `1C` typo), assessed from standard photographs only
+and N/A for thermal by design.
+
+| Quantity | Value |
+|---|---|
+| Patients scored in tracker | 82 |
+| Within-patient consistency | 82/82, zero disagreements |
+| In the 210-patient cohort | 68 (32%) |
+| SSI patients scored | 5 of 20 |
+| Type VI represented | none |
+
+Cohort distribution (patient-level modal type): I=27, II=23, III=12, IV=4, V=2.
+
+Table 1 now reports this distribution with 142 (68%) missing, replacing the
+incorrect "not collected" row. The Limitations claim that performance by skin
+tone is not estimable still holds, but for the right reason: 5 SSI patients
+across four types, no type VI.
+
+Do not mistake `SSI_Fitzpatrick_Data_Matrix(Data Collection Matrix).csv` on the
+drive for this data — it is an unpopulated template whose `RU-1001` identifiers
+do not match the cohort's `RU-A1001` scheme.
+
+Source: `fitzpatrick_patient_level.csv`, built by `work/.../analyze_fitzpatrick.py`.

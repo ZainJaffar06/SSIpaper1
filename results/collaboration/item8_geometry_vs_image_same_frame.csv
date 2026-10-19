@@ -1,0 +1,2 @@
+comparison,geometry_auroc,geometry_lo,geometry_hi,image_model_auroc_same_frame,difference,n,events,note
+"geometry probe vs full-image model, same masking frame",0.8016,0.6804,0.8972,0.6714,0.1302,206,19,"supersedes the earlier 0.802-vs-0.754 comparison, which mixed frames"

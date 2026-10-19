@@ -1,0 +1,6 @@
+encoder,condition,dim,auroc,lo,hi
+biomedclip_vitb16,full_image,768,0.613,0.456,0.7602
+biomedclip_vitb16,wound_only,768,0.591,0.4339,0.7266
+biomedclip_vitb16,background_only,768,0.6262,0.4754,0.7728
+biomedclip_vitb16,sham_wound_only,768,0.6335,0.481,0.7819
+biomedclip_vitb16,sham_background_only,768,0.6262,0.4627,0.7759

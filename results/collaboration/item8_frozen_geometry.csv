@@ -1,0 +1,4 @@
+feature,auroc,lo,hi
+binary_mask_image,0.4647,0.3268,0.601
+scalar_geometry_7,0.8016,0.6804,0.8972
+mask_area_only,0.5995,0.4405,0.7527

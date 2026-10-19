@@ -1,0 +1,12 @@
+quantity,value
+true_wound_auroc,0.5381
+published_roll_shift_auroc,0.6409
+null_mean,0.5815
+null_sd,0.0594
+null_p2.5,0.4693
+null_p97.5,0.7004
+true_wound_percentile,23.7
+n_draws_ge_true_wound,229.0
+K,300.0
+one_sided_p,0.7641
+median_iou,0.0

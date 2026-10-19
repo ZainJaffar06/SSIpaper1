@@ -1,0 +1,27 @@
+patient_id,classification,in_pod7_risk_set,POD
+RU-A1041,Incisional,yes,10.0
+RU-A1042,Organ/space,no,4.0
+RU-A1048,Incisional,yes,51.0
+RU-A1050,Incisional,yes,16.0
+RU-A1062,Incisional,yes,28.0
+RU-A1071,Organ/space,yes,9.0
+RU-A1078,Incisional,yes,12.0
+RU-A1089,Remote from photographed incision,yes,21.0
+RU-A1099,Incisional,no,5.0
+RU-A1104,Remote from photographed incision,no,11.0
+RU-A1107,Incisional,yes,15.0
+RU-A1108,Incisional,no,27.0
+RU-A1156,Organ/space,yes,14.0
+RU-A1163,Incisional,no,10.0
+RU-A1170,Organ/space,yes,12.0
+RU-A1180,Incisional,yes,47.0
+RU-A1195,Incisional,no,21.0
+RU-A1229,Organ/space,yes,22.0
+RU-A1240,Incisional,yes,13.0
+RU-A1251,Incisional,yes,25.0
+RU-A1275,Incisional,yes,18.0
+RU-A1303,Incisional,no,15.0
+RU-A1308,Incisional,no,6.0
+RU-A1345,No chart data,no,
+RU-A1347,No chart data,no,
+RU-A1365,No chart data,no,

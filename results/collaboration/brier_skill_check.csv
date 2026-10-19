@@ -1,0 +1,7 @@
+metric,value
+brier_reproduced,0.0697
+brier_published,0.0697
+no_information_brier,0.0676
+brier_skill_score,-0.031
+n,192.0
+events,14.0

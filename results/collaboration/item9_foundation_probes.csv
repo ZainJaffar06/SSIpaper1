@@ -1,0 +1,6 @@
+encoder,condition,dim,auroc,lo,hi
+dinov2_vitb14,full_image,768,0.7247,0.5792,0.8517
+dinov2_vitb14,wound_only,768,0.5592,0.3926,0.7174
+dinov2_vitb14,background_only,768,0.745,0.5931,0.8771
+dinov2_vitb14,sham_wound_only,768,0.6527,0.4924,0.8027
+dinov2_vitb14,sham_background_only,768,0.803,0.6829,0.9032

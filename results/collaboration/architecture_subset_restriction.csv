@@ -1,0 +1,4 @@
+architecture,full_data_mean,masking_subset_mean,delta,n_seeds
+resnet18,0.7556,0.7573,0.0017,3
+efficientnet_b0,0.7327,0.7367,0.004,3
+vit_b_16,0.6839,0.6771,-0.0069,3

@@ -6,14 +6,14 @@ RU-A1028,0,Abdomen,,
 RU-A1029,0,Abdomen,,
 RU-A1030,0,Abdomen,Class II: Clean-contaminated,
 RU-A1035,0,Abdomen,Class III: Contaminated,
-RU-A1041,1,Abdomen,,Deep incisional
+RU-A1041,1,Abdomen,,Incisional
 RU-A1042,1,Abdomen,Class IV: Dirty-Infected,Organ/space
-RU-A1048,1,Abdomen,Class III: Contaminated,Superficial incisional
+RU-A1048,1,Abdomen,Class III: Contaminated,Incisional
 RU-A1049,0,Abdomen,,
-RU-A1050,1,Abdomen,Class I: clean,Superficial incisional
+RU-A1050,1,Abdomen,Class I: clean,Incisional
 RU-A1052,0,Abdomen,Class II: Clean-contaminated,
 RU-A1058,0,Abdomen,Class III: Contaminated,
-RU-A1062,1,Abdomen,Class III: Contaminated,Superficial incisional
+RU-A1062,1,Abdomen,Class III: Contaminated,Incisional
 RU-A1064,0,Abdomen,Class II: Clean-contaminated,
 RU-A1067,0,Abdomen,Class III: Contaminated,
 RU-A1068,0,Abdomen,,
@@ -24,7 +24,7 @@ RU-A1072,0,Abdomen,,
 RU-A1073,0,Abdomen,Class IV: Dirty-Infected,
 RU-A1074,0,Abdomen,Class III: Contaminated,
 RU-A1076,0,Abdomen,Class III: Contaminated,
-RU-A1078,1,Abdomen,Class IV: Dirty-Infected,Deep incisional
+RU-A1078,1,Abdomen,Class IV: Dirty-Infected,Incisional
 RU-A1079,0,Chest,Class I: clean,
 RU-A1080,0,Abdomen,Class II: Clean-contaminated,
 RU-A1081,0,Abdomen,Class III: Contaminated,
@@ -34,7 +34,7 @@ RU-A1084,0,Abdomen,Class IV: Dirty-Infected,
 RU-A1085,0,Abdomen,,
 RU-A1087,0,Chest,Class I: clean,
 RU-A1088,0,Chest,Class I: clean,
-RU-A1089,1,Abdomen,Class III: Contaminated,Organ/space
+RU-A1089,1,Abdomen,Class III: Contaminated,Remote from photographed incision
 RU-A1090,0,Chest,,
 RU-A1091,0,Chest,Class I: clean,
 RU-A1092,0,Chest,Class I: clean,
@@ -42,13 +42,13 @@ RU-A1094,0,Chest,Class I: clean,
 RU-A1095,0,Chest,Class I: clean,
 RU-A1096,0,Chest,Class I: clean,
 RU-A1098,0,Chest,Class I: clean,
-RU-A1099,1,Chest,Class I: clean,Superficial incisional
+RU-A1099,1,Chest,Class I: clean,Incisional
 RU-A1100,0,Chest,Class I: clean,
 RU-A1101,0,Chest,Class I: clean,
 RU-A1103,0,Chest,Class I: clean,
 RU-A1105,0,Chest,Class I: clean,
-RU-A1106,1,Chest,Class I: clean,
-RU-A1107,0,Abdomen,Class IV: Dirty-Infected,Superficial incisional
+RU-A1106,1,Chest,Class I: clean,UNCLASSIFIED
+RU-A1107,0,Abdomen,Class IV: Dirty-Infected,Incisional
 RU-A1109,0,,Class III: Contaminated,
 RU-A1110,0,Chest,Class I: clean,
 RU-A1111,0,Chest,Class I: clean,
@@ -93,7 +93,7 @@ RU-A1152,0,Chest,Class I: clean,
 RU-A1153,0,Abdomen,Class III: Contaminated,
 RU-A1154,0,Chest,Class I: clean,
 RU-A1155,0,Chest,Class I: clean,
-RU-A1156,1,Abdomen,Class II: Clean-contaminated,Superficial incisional
+RU-A1156,1,Abdomen,Class II: Clean-contaminated,Organ/space
 RU-A1157,0,Chest,Class I: clean,
 RU-A1158,0,Chest,Class I: clean,
 RU-A1159,0,Chest,Class I: clean,
@@ -115,7 +115,7 @@ RU-A1175,0,Chest,Class I: clean,
 RU-A1176,0,Abdomen,,
 RU-A1177,0,Chest,Class I: clean,
 RU-A1179,0,Chest,Class I: clean,
-RU-A1180,1,Chest,,Depth not specified
+RU-A1180,1,Chest,,Incisional
 RU-A1181,0,Chest,Class I: clean,
 RU-A1182,0,Abdomen,,
 RU-A1183,0,Chest,Class I: clean,
@@ -160,7 +160,7 @@ RU-A1236,0,Chest,Class I: clean,
 RU-A1237,0,Chest,Class I: clean,
 RU-A1238,0,Chest,Class I: clean,
 RU-A1239,0,Chest,Class I: clean,
-RU-A1240,1,Chest,Class I: clean,Superficial incisional
+RU-A1240,1,Chest,Class I: clean,Incisional
 RU-A1241,0,Chest,Class I: clean,
 RU-A1242,0,Chest,Class I: clean,
 RU-A1243,0,Chest,Class I: clean,
@@ -170,7 +170,7 @@ RU-A1246,0,Abdomen,,
 RU-A1248,0,Chest,Class I: clean,
 RU-A1249,0,Chest,Class I: clean,
 RU-A1250,0,Chest,Class I: clean,
-RU-A1251,1,Abdomen,Class I: clean,Superficial incisional
+RU-A1251,1,Abdomen,Class I: clean,Incisional
 RU-A1252,0,Chest,Class I: clean,
 RU-A1254,0,Chest,Class I: clean,
 RU-A1255,0,Chest,Class I: clean,
@@ -192,7 +192,7 @@ RU-A1271,0,Abdomen,Class II: Clean-contaminated,
 RU-A1272,0,Chest,Class I: clean,
 RU-A1273,0,Chest,Class I: clean,
 RU-A1274,0,Chest,Class I: clean,
-RU-A1275,1,Abdomen,Class II: Clean-contaminated,Superficial incisional
+RU-A1275,1,Abdomen,Class II: Clean-contaminated,Incisional
 RU-A1276,0,Chest,Class I: clean,
 RU-A1277,0,Chest,Class I: clean,
 RU-A1278,0,Abdomen,Class IV: Dirty-Infected,
@@ -204,8 +204,8 @@ RU-A1283,0,Chest,Class I: clean,
 RU-A1284,0,,,
 RU-A1304,0,,Class I: clean,
 RU-A1307,0,,Class I: clean,
-RU-A1308,1,,Class IV: Dirty-Infected,Depth not specified
+RU-A1308,1,,Class IV: Dirty-Infected,Incisional
 RU-A1310,0,,Class I: clean,
 RU-A1311,0,,Class I: clean,
-RU-A1345,1,,Class I: clean,Not documented
-RU-A1347,1,,Class II: Clean-contaminated,Not documented
+RU-A1345,1,,Class I: clean,No chart data
+RU-A1347,1,,Class II: Clean-contaminated,No chart data

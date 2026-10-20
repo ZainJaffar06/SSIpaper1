@@ -1,0 +1,10 @@
+quantity,value
+per_seed_contrasts,"+0.1573, +0.1233, +0.1331"
+mean,0.1379
+patient_SE,0.0458
+between_seed_SE,0.0101
+combined_SE,0.0469
+seed_aware_lo,0.046
+seed_aware_hi,0.2298
+seed_aware_p,0.0033
+seed_aware_holm_m6,0.0196

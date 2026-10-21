@@ -1,0 +1,4 @@
+landmark,n_pts,n_events,auroc,lo,hi,auprc,labels,estimand
+7,192,14,0.7544,0.6318,0.8608,0.162,final,"SSI diagnosed after landmark, among those still at risk"
+14,193,8,0.6905,0.4992,0.8558,0.0848,final,"SSI diagnosed after landmark, among those still at risk"
+30,187,2,0.5378,0.1613,0.9086,0.0275,final,"SSI diagnosed after landmark, among those still at risk"

@@ -1,0 +1,6 @@
+analysis,n_pts,n_events,auroc,lo,hi,auprc
+"POD 7, mean of photographs through POD 7 (PRIMARY)",132,8,0.7046,0.4656,0.9211,0.3765
+"POD 7, latest photograph through POD 7",132,8,0.7671,0.5902,0.9257,0.2457
+"POD 7, photograph closest to POD 7",132,8,0.7762,0.6151,0.9189,0.2317
+"POD 14, mean",157,5,0.7197,0.4004,0.9222,0.105
+"POD 30, mean",159,1,0.9747,0.949,0.9937,0.2

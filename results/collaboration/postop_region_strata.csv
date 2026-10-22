@@ -1,0 +1,6 @@
+stratum,n,events,auroc,lo,hi
+All (pooled),132,8,0.7046,0.4656,0.9211
+Chest,92,1,0.4615,0.3596,0.5604
+Abdomen,38,7,0.6037,0.2535,0.9515
+BENCHMARK region indicator alone,130,8,0.8105,0.66,0.9023
+BENCHMARK CDC wound class alone,115,6,0.7676,0.5439,0.9531

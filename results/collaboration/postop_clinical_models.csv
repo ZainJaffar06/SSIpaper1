@@ -1,0 +1,6 @@
+model,n_pts,n_events,auroc,lo,hi,auprc
+clinical 8-variable,171,13,0.6224,0.4216,0.8194,0.2453
+clinical v2 5-variable,171,13,0.6621,0.4156,0.8732,0.2393
+image only,171,13,0.7439,0.5496,0.9038,0.2699
+"stacked, 8-variable + image",171,13,0.8812,0.7605,0.9606,0.3881
+"stacked, v2 + image",171,13,0.7191,0.5191,0.8894,0.2019

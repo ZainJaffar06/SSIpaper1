@@ -1,0 +1,4 @@
+analysis,n,events,auroc,lo,hi
+All SSI types,132,8,0.7046,0.4575,0.9238
+Excluding organ/space,130,6,0.6089,0.3392,0.895
+Excluding organ/space and remote-site,130,6,0.6089,0.3392,0.895

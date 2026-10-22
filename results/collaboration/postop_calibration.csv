@@ -1,0 +1,7 @@
+metric,value
+brier,0.0525
+no_information_brier,0.0569
+brier_skill,0.0781
+calibration_slope,0.3781
+calibration_intercept,-1.2934
+prevalence,0.0606

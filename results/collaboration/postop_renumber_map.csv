@@ -1,0 +1,52 @@
+section,quantity,old,new,source,note
+Results/primary,POD-7 risk set n / events,192 / 14,132 / 8,primary_and_landmarks,
+Results/primary,primary AUROC,0.754,0.705,primary_and_landmarks,
+Results/primary,primary 95% CI,0.632-0.861,0.466-0.921,primary_and_landmarks,now includes 0.5
+Results/primary,primary AUPRC,0.162,0.377,primary_and_landmarks,
+Results/primary,prevalence,7.3%,6.1%,primary_and_landmarks,
+Results/primary,no-information AUPRC,0.073,0.061,derived,
+Results/primary,latest photograph AUROC,0.737,0.767,primary_and_landmarks,now EXCEEDS primary
+Results/primary,closest-to-POD7 AUROC,0.748,0.776,primary_and_landmarks,now EXCEEDS primary
+Table S5,POD 14 n / events / AUROC,193 / 8 / 0.691,157 / 5 / 0.720,primary_and_landmarks,
+Table S5,POD 30 n / events / AUROC,187 / 2 / 0.538,159 / 1 / not estimable,primary_and_landmarks,1 event: not a quantity
+Cohort,photographs,"1,948","1,341",per_photo_frame,
+Cohort,patients,210,171,per_photo_frame,
+Cohort,SSI patients,20,13,per_photo_frame,
+Cohort,patients per fold,"42, 41, 43, 42, 42","31, 34, 36, 38, 32",per_photo_frame,
+Cohort,SSI events per fold,"6, 2, 4, 4, 4","3, 0, 4, 2, 4",per_photo_frame,fold 1 has no events
+Cohort,diagnosis-timing frame,203 / 17,170 / 12,figure1_params,
+Cohort,mask-eligible frame,"206 pts / 1,886 imgs / 19 ev","168 pts / 1,296 imgs / 12 ev",retrain log,
+Table S1/Table 4,ResNet18,0.756+/-0.038 (0.714-0.789),0.736+/-0.033 (0.713-0.773),architectures,
+Table S1/Table 4,EfficientNet-B0,0.733+/-0.049 (0.678-0.774),0.712+/-0.018 (0.693-0.729),architectures,
+Table S1/Table 4,ViT-B/16,0.684+/-0.045 (0.632-0.714),0.740+/-0.025 (0.724-0.768),architectures,
+Table S1/Table 4,ordering,ResNet18 > EfficientNet > ViT,ViT > ResNet18 > EfficientNet,architectures,ordering inverted
+Table 3,clinical 8-variable AUROC,0.664 (0.494-0.813),0.622 (0.422-0.819),clinical_models,
+Table 3,image AUROC (full cohort),0.765 (0.666-0.847),0.744 (0.550-0.904),clinical_models,
+Table 3,stacked AUROC,0.800 (0.691-0.890),0.881 (0.760-0.961),clinical_models,
+Table 3,clinical v2 AUROC,0.705 (0.540-0.849),0.662 (0.416-0.873),clinical_models,
+Results/clinical,image adds to 8-variable,+0.135 (+0.037 to +0.253; P=0.005),+0.259 (+0.100 to +0.436; P=0.002),clinical_contrasts,now larger and significant
+Results/clinical,image adds to v2,-0.003 (-0.037 to +0.034; P=0.82),+0.057 (-0.025 to +0.161; P=0.21),clinical_contrasts,still null
+Results/clinical,partition stability,"+0.025 to +0.135, 2 of 5 significant","+0.123 to +0.259, all 5 positive",clinical_partition_stability,no longer fragile
+Limitations/region,abdominal stratum,"0.466 (0.297-0.635), 12 of 14 events","0.604 (0.254-0.952), 7 events",region_strata,
+Limitations/region,chest stratum,"0.647 (0.272-0.992), 2 events","0.462 (0.360-0.560), 1 events",region_strata,
+Limitations/region,region indicator alone,0.793 (0.680-0.879),"0.810 (0.660-0.902), 8 events",region_strata,
+Limitations/region,CDC wound class alone,0.781 (0.632-0.919),"0.768 (0.544-0.953), 6 events",region_strata,
+Limitations/region,event-weighted stratified,0.492,0.586,region_strata,
+Table S6,Brier score,0.070 (0.042-0.102),0.052,calibration,
+Table S6,no-information Brier,0.068,0.057,calibration,
+Table S6,Brier skill score,-0.03,+0.078,calibration,now positive
+Table S6,calibration slope,0.673 (0.299-1.149),0.378,calibration,materially worse
+Table S6,calibration intercept,-0.788 (-2.021 to +0.474),-1.293,calibration,
+Table 2/S6,80% specificity: sens / spec / flagged,0.643 / 0.798 / 0.234,0.500 / 0.798 / 0.220,operating_points,
+Table 2/S6,90% specificity: sens,0.286,0.500,operating_points,identical at 80/90/95%: 8 events
+Table 2,capture-13-of-14 threshold row,sens 0.929,no counterpart at 8 events,operating_points,row must be rebuilt
+Results/types,excluding organ-space,"0.714 (0.562-0.843), 10 events","0.609 (0.339-0.895), 6 events",incisional_sensitivity,
+Results/types,excluding organ-space + remote,"0.724 (0.555-0.864), 9 events","0.609 (0.339-0.895), 6 events",incisional_sensitivity,no remote-site patient remains
+PENDING,masking absolutes (5 conditions x 3 seeds),(current values),awaiting re-run,pending,
+PENDING,masking contrasts (6),(current values),awaiting re-run,pending,
+PENDING,permutation null / percentile / P,(current values),awaiting re-run,pending,
+PENDING,locked-shift re-scored percentile,(current values),awaiting re-run,pending,
+PENDING,mask-as-image 3-seed,(current values),awaiting re-run,pending,
+PENDING,learning curve,(current values),awaiting re-run,pending,
+PENDING,context probes,(current values),awaiting re-run,pending,
+PENDING,foundation probes,(current values),awaiting re-run,pending,

@@ -42,11 +42,13 @@ Table 2/S6,90% specificity: sens,0.286,0.500,operating_points,identical at 80/90
 Table 2,capture-13-of-14 threshold row,sens 0.929,no counterpart at 8 events,operating_points,row must be rebuilt
 Results/types,excluding organ-space,"0.714 (0.562-0.843), 10 events","0.609 (0.339-0.895), 6 events",incisional_sensitivity,
 Results/types,excluding organ-space + remote,"0.724 (0.555-0.864), 9 events","0.609 (0.339-0.895), 6 events",incisional_sensitivity,no remote-site patient remains
-PENDING,masking absolutes (5 conditions x 3 seeds),(current values),awaiting re-run,pending,
-PENDING,masking contrasts (6),(current values),awaiting re-run,pending,
-PENDING,permutation null / percentile / P,(current values),awaiting re-run,pending,
-PENDING,locked-shift re-scored percentile,(current values),awaiting re-run,pending,
-PENDING,mask-as-image 3-seed,(current values),awaiting re-run,pending,
-PENDING,learning curve,(current values),awaiting re-run,pending,
-PENDING,context probes,(current values),awaiting re-run,pending,
-PENDING,foundation probes,(current values),awaiting re-run,pending,
+PENDING,masking absolutes (5 conditions x 3 seeds),0.671 / 0.655 / 0.753 / 0.793 / 0.670,0.749 / 0.639 / 0.754 / 0.689 / 0.799,pending,true wound now LOWEST; complement HIGHEST
+PENDING,masking contrasts (6),"shifted-wound +0.138, Holm 0.020 (significant)","shifted-wound +0.050 (-0.100 to +0.235), P=0.60, Holm 1.00; NO contrast significant",pending,HEADLINE CONTRAST COLLAPSED
+PENDING,permutation null / percentile / P,"20th pct, 240/300, P=0.80, null 0.585 (0.057)","22th pct, 233/300, P=0.78, null 0.623 (0.071)",pending,REPLICATES; 1 infeasible image vs 46
+PENDING,locked-shift re-scored percentile,"0.641 at 84th pct, 2.2x typical","0.713 at 89th pct, 2.7x typical",pending,
+PENDING,mask-as-image 3-seed,0.579 (0.563-0.609),deferred (resumable),pending,not on critical path
+PENDING,learning curve,0.607 / 0.743 / 0.733,deferred (resumable),pending,not on critical path
+PENDING,context probes,combined 0.727 vs full 0.636,NOT RE-RUN,pending,control 1 pending
+PENDING,foundation probes,DINOv2 wound 0.559 lowest,NOT RE-RUN,pending,control 6 pending
+Table 4,POD-7 clinical / stacked,0.713 / 0.740,0.577 / 0.776,clinical_pod7,
+Table S7,stage positive control,"0.976 (881 imgs, 321 intraoperative)",re-running on 549 postoperative images,stage_control,comment 75: early class was 36% intraoperative

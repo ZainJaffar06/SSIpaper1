@@ -51,4 +51,4 @@ PENDING,learning curve,0.607 / 0.743 / 0.733,deferred (resumable),pending,not on
 PENDING,context probes,combined 0.727 vs full 0.636,NOT RE-RUN,pending,control 1 pending
 PENDING,foundation probes,DINOv2 wound 0.559 lowest,NOT RE-RUN,pending,control 6 pending
 Table 4,POD-7 clinical / stacked,0.713 / 0.740,0.577 / 0.776,clinical_pod7,
-Table S7,stage positive control,"0.976 (881 imgs, 321 intraoperative)",re-running on 549 postoperative images,stage_control,comment 75: early class was 36% intraoperative
+Table S7,stage positive control,"0.976 (881 imgs, 321 intraoperative)","0.934 (0.897-0.966), 549 imgs / 140 pts (84 early, 465 late)",stage_control,re-run; early class had been 36% intraoperative

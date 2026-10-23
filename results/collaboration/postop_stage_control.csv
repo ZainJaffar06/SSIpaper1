@@ -1,0 +1,2 @@
+level,n_images,n_patients,n_early,n_late,definition,auroc,lo,hi
+Image,549,140,84,465,"POD 0-2 vs POD 14-30, postoperative photographs only",0.9344,0.8969,0.9655

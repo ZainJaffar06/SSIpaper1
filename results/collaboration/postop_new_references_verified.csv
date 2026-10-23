@@ -1,0 +1,18 @@
+final_number,citation,identifier,verified_against
+7,Bucher BT et al. Ann Surg 2020;272:629-636,10.1097/SLA.0000000000004133,DOI read from the publisher PDF
+16,Hooker S et al. NeurIPS 2019,arXiv:1806.10758,arXiv abstract page
+17,Norman G et al. Cochrane Database Syst Rev 2022;4:CD009261,10.1002/14651858.CD009261.pub7,Cochrane Library + PubMed 35471497
+20,Bluebelle Study Group. Br J Surg 2019;106:226-235,10.1002/bjs.11008,PMC6457211 + UCL/Bristol/Warwick records
+21,von Elm E et al. Lancet 2007;370:1453-1457,10.1016/S0140-6736(07)61602-X,STROBE site + PubMed 18064739
+25,He K et al. CVPR 2016:770-778,10.1109/CVPR.2016.90,IEEE Xplore 7780459 + CVF open access
+26,"Tan M, Le QV. ICML 2019",arXiv:1905.11946,arXiv abstract page
+27,Dosovitskiy A et al. ICLR 2021,arXiv:2010.11929,arXiv abstract page (ICLR camera-ready)
+28,Deng J et al. CVPR 2009:248-255,10.1109/CVPR.2009.5206848,IEEE Xplore 5206848 + Princeton record
+29,"Loshchilov I, Hutter F. ICLR 2019",arXiv:1711.05101,arXiv abstract page
+30,Oquab M et al. arXiv 2023,arXiv:2304.07193,arXiv abstract page
+31,Zhang S et al. arXiv 2023,arXiv:2303.00915,arXiv abstract page
+32,Holm S. Scand J Stat 1979;6:65-70,10.2307/4615733,JSTOR 4615733
+33,"Platt J. Advances in Large Margin Classifiers, MIT Press 1999:61-74",(chapter; no DOI),CSIE NTU copy + multiple reference lists
+35,"Zauner C. MSc thesis, Hagenberg 2010",(thesis; no DOI),phash.org/docs/pubs/thesis_zauner.pdf
+36,Fitzpatrick TB. Arch Dermatol 1988;124:869-871,10.1001/archderm.124.6.869,PubMed 3377516
+37,Fleiss JL. Psychol Bull 1971;76:378-382,10.1037/h0031619,SWOV catalogue + CRAN package refs

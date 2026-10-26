@@ -1,0 +1,5 @@
+probe,image_auroc,patient_auroc,lo,hi,full_image_3seed_mean,full_minus_probe
+pod_only,0.497,0.5975,0.4291,0.7535,0.7493,0.1518
+acquisition,0.7121,0.7222,0.5475,0.871,0.7493,0.0271
+behavior_past_only,0.6478,0.6418,0.4563,0.812,0.7493,0.1075
+acquisition+behavior+pod,0.711,0.7019,0.5276,0.8551,0.7493,0.0474

@@ -41,8 +41,12 @@ def cells_all():
             out.append((ti,tr,row))
     return out
 def set_row(label,vals,lab,table_hint=None):
-    for ti,tr,row in cells_all():
-        if row and re.fullmatch(label,row[0][1]) and (table_hint is None or re.search(table_hint,' | '.join(c[1] for c in row))):
+    """Set the cells after the first-column label. table_hint is a regex that the WHOLE TABLE's text must
+    match, so rows with common labels (Full image, Full, ...) are addressed inside the intended table."""
+    allc=cells_all(); ttext={}
+    for ti,tr,row in allc: ttext[ti]=ttext.get(ti,'')+' | '+' | '.join(c[1] for c in row)
+    for ti,tr,row in allc:
+        if row and re.fullmatch(label,row[0][1]) and (table_hint is None or re.search(table_hint,ttext[ti])):
             for (tc,old),v in zip(row[1:],vals):
                 if v is not None and old!=v: doc.set_cell_tracked(tc,v)
             LOG.append(f'OK   row {lab}'); return True
@@ -69,7 +73,7 @@ R(r'calibration slope of 0\.38, and calibration intercept of [−-]1\.29 \(95% C
 R(r'calibration slope of 0\.67 \(95% CI, 0\.30–1\.15\), and calibration intercept of −0\.79 \(95% CI, −2\.02 to 0\.47\)',newcal,'calibration CIs (original form)')
 R(r'At a threshold selected for approximately 80% specificity, sensitivity was 64\.3% and 23\.4% of patients were flagged\. Capturing 13 of 14 infections \(92\.9% sensitivity\) required flagging 50\.5% of patients and yielded 52\.8% specificity\. Capturing all 14 infections required flagging 77\.1% of patients\.',
   f'At a threshold selected for approximately 80% specificity, sensitivity was {100*o8.sensitivity:.1f}% and {100*o8.n_flagged/n:.1f}% of patients were flagged. Capturing {e-1} of {e} infections ({100*c7[0]:.1f}% sensitivity) required flagging {100*c7[2]:.1f}% of patients and yielded {100*c7[1]:.1f}% specificity. Capturing all {e} infections required flagging {100*c8[2]:.1f}% of patients.','operating-point sentence')
-set_row(r'Calibration slope',[f3(cc.slope),cito(cc.slope_lo,cc.slope_hi)],'S6 slope CI'); set_row(r'Calibration intercept',[f3(cc.intercept),cito(cc.intercept_lo,cc.intercept_hi)],'S6 intercept CI')
+set_row(r'Calibration slope',[f3(cc.slope),cito(cc.slope_lo,cc.slope_hi)],'S6 slope CI',table_hint='Brier'); set_row(r'Calibration intercept',[f3(cc.intercept),cito(cc.intercept_lo,cc.intercept_hi)],'S6 intercept CI',table_hint='Brier')
 
 # ---------------- D. overlap audit ----------------
 pct=f'{100*ov.frac_le_0_05:.1f}%'
@@ -106,11 +110,11 @@ R(r'The combined probe exceeded the point estimate of the retrained full-image m
 R(r'The probe pipeline was reimplemented and reproduces the originally reported values to within 0\.016; within this implementation the combined probe was 0\.721 under the original labels and 0\.727 under the final labels\.','Confidence intervals are patient-clustered bootstrap percentiles with 20,000 resamples; the full-image value is the mean of three training seeds.','S3 footnote 2')
 R(r'The combined context probe approximately matched the full-image model\.',f'The full-image model exceeded the combined context probe by {s3(sd_["mean"])} on average across seeds, within the seed spread.','Fig 3 caption')
 set_row(r'Input',['Patient AUROC (95% CI)',None],'S3 header',table_hint='Full-image minus probe')
-set_row(r'Full RGB image',[f3(full),'Reference'],'S3 full image')
-set_row(r'POD only',[f'{f3(P("pod_only").patient_auroc)} ({ci(P("pod_only").lo,P("pod_only").hi)})',s3(d("pod_only"))],'S3 POD')
-set_row(r'Acquisition features',[f'{f3(P("acquisition").patient_auroc)} ({ci(P("acquisition").lo,P("acquisition").hi)})',s3(d("acquisition"))],'S3 acquisition')
-set_row(r'Prior imaging behavior',[f'{f3(P("behavior_past_only").patient_auroc)} ({ci(P("behavior_past_only").lo,P("behavior_past_only").hi)})',s3(d("behavior_past_only"))],'S3 behavior')
-set_row(r'Acquisition \+ behavior \+ POD',[f'{f3(P("acquisition+behavior+pod").patient_auroc)} ({ci(P("acquisition+behavior+pod").lo,P("acquisition+behavior+pod").hi)})',s3(d("acquisition+behavior+pod"))],'S3 combined')
+set_row(r'Full RGB image',[f3(full),'Reference'],'S3 full image',table_hint='Full-image minus probe')
+set_row(r'POD only',[f'{f3(P("pod_only").patient_auroc)} ({ci(P("pod_only").lo,P("pod_only").hi)})',s3(d("pod_only"))],'S3 POD',table_hint='Full-image minus probe')
+set_row(r'Acquisition features',[f'{f3(P("acquisition").patient_auroc)} ({ci(P("acquisition").lo,P("acquisition").hi)})',s3(d("acquisition"))],'S3 acquisition',table_hint='Full-image minus probe')
+set_row(r'Prior imaging behavior',[f'{f3(P("behavior_past_only").patient_auroc)} ({ci(P("behavior_past_only").lo,P("behavior_past_only").hi)})',s3(d("behavior_past_only"))],'S3 behavior',table_hint='Full-image minus probe')
+set_row(r'Acquisition \+ behavior \+ POD',[f'{f3(P("acquisition+behavior+pod").patient_auroc)} ({ci(P("acquisition+behavior+pod").lo,P("acquisition+behavior+pod").hi)})',s3(d("acquisition+behavior+pod"))],'S3 combined',table_hint='Full-image minus probe')
 
 # ---------------- H. S11 geometry ----------------
 mi=sorted(glob.glob(PO+'maskimage_seed*.csv')); ft_txt=None
@@ -129,12 +133,12 @@ R(r'reached 0\.465 \(95% CI, 0\.327–0\.601\) with frozen features and 0\.579 \
   f'reached {f3(fz.auroc)} (95% CI, {ci(fz.lo,fz.hi)}) with frozen features and {ftc} across three fine-tuned seeds. Seven scalar descriptors of the mask alone — area, centroid, bounding-box dimensions, elongation and fill ratio — reached {f3(g7.auroc)} ({ci(g7.lo,g7.hi)}), below the {f3(full)} three-seed mean of the full-image model on the same frame, and mask area alone was below chance ({f3(ao.auroc)}, {ci(ao.lo,ao.hi)}; Supplementary Table S11). The descriptors still discriminated operative region, with elongation and fill ratio separating chest from abdominal incisions (AUROC {aur(el):.2f} and {aur(fr_):.2f}), so annotation geometry carries case-mix information independently of image content.','S11 paragraph')
 R(r'The more informative observation is that seven scalar descriptors of the annotation geometry alone exceeded the full-image model, since those descriptors also encode operative region\.',
   f'Seven scalar descriptors of the annotation geometry alone reached {f3(g7.auroc)}, within {abs(float(fg.loc["geometry_minus_full_image"].auroc)):.2f} of the full-image model, and those descriptors also encode operative region.','S11 discussion sentence')
-set_row(r'Binary mask as an image, frozen features',[f'{f3(fz.auroc)} ({ci(fz.lo,fz.hi)})'],'S11 frozen')
-if ft_txt: set_row(r'Binary mask as an image, fine-tuned, 3 seeds',[ft_cell],'S11 fine-tuned')
-set_row(r'Mask area alone',[f'{f3(ao.auroc)} ({ci(ao.lo,ao.hi)})'],'S11 area')
-set_row(r'Seven scalar geometry descriptors',[f'{f3(g7.auroc)} ({ci(g7.lo,g7.hi)})'],'S11 seven')
-set_row(r'Full-image model, same frame, 3-seed mean',[f3(full)],'S11 full')
-set_row(r'Difference, geometry minus full image',[s3(fg.loc['geometry_minus_full_image'].auroc)],'S11 diff')
+set_row(r'Binary mask as an image, frozen features',[f'{f3(fz.auroc)} ({ci(fz.lo,fz.hi)})'],'S11 frozen',table_hint='geometry')
+if ft_txt: set_row(r'Binary mask as an image, fine-tuned, 3 seeds',[ft_cell],'S11 fine-tuned',table_hint='geometry')
+set_row(r'Mask area alone',[f'{f3(ao.auroc)} ({ci(ao.lo,ao.hi)})'],'S11 area',table_hint='geometry')
+set_row(r'Seven scalar geometry descriptors',[f'{f3(g7.auroc)} ({ci(g7.lo,g7.hi)})'],'S11 seven',table_hint='geometry')
+set_row(r'Full-image model, same frame, 3-seed mean',[f3(full)],'S11 full',table_hint='geometry')
+set_row(r'Difference, geometry minus full image',[s3(fg.loc['geometry_minus_full_image'].auroc)],'S11 diff',table_hint='geometry')
 R(r'The comparison with the full-image model is on the same 206-patient mask-eligible frame','The comparison with the full-image model is on the same 168-patient mask-eligible frame','S11 footnote frame')
 
 # ---------------- I. S12 foundation (pending until CSVs exist) ----------------
@@ -143,7 +147,7 @@ if os.path.exists(D+'foundation_probes_postop.csv') and os.path.exists(D+'founda
     V=lambda enc,c:fp[(fp.encoder==enc)&(fp.condition==c)].iloc[0]
     cond={'Full image':'full_image','True wound-only':'wound_only','True background-only':'background_only','Circularly shifted region':'sham_wound_only','Complement of shifted region':'sham_background_only'}
     for lab,c in cond.items():
-        a=V('dinov2_vitb14',c); b=V('biomedclip_vitb16',c); set_row(re.escape(lab),[f'{f3(a.auroc)} ({ci(a.lo,a.hi)})',f'{f3(b.auroc)} ({ci(b.lo,b.hi)})'],f'S12 {lab}',table_hint='DINOv2|dinov2|0\\.')
+        a=V('dinov2_vitb14',c); b=V('biomedclip_vitb16',c); set_row(re.escape(lab),[f'{f3(a.auroc)} ({ci(a.lo,a.hi)})',f'{f3(b.auroc)} ({ci(b.lo,b.hi)})'],f'S12 {lab}',table_hint='DINOv2')
     # paragraph composed from the data: ranks against the fine-tuned 3-seed ordering, the contrast family, the area-matched contrast
     ftm={'full_image':ma.loc['Full image'].seed_mean,'wound_only':ma.loc['True wound-only'].seed_mean,'background_only':ma.loc['True background-only'].seed_mean,'sham_wound_only':ma.loc['Circularly shifted wound-size region'].seed_mean,'sham_background_only':ma.loc['Complement of shifted region'].seed_mean}
     def ranks(dct): return {k:i+1 for i,(k,v) in enumerate(sorted(dct.items(),key=lambda kv:-kv[1]))}
@@ -159,8 +163,8 @@ if os.path.exists(D+'foundation_probes_postop.csv') and os.path.exists(D+'founda
           +("No contrast in the family survived Holm correction" if not sig else f"{len(sig)} contrast(s) survived Holm correction ({'; '.join(sig)})")
           +" (Supplementary Table S12).")
     R(r'Frozen foundation-model probes agreed with the fine-tuned analysis on the true wound region but not on the ordering as a whole\..*?\(Supplementary Table S12\)\.',para,'S12 paragraph')
-    set_row(r'background only - wound only',[C('background_only - wound_only').replace('; Holm-adjusted P=',', Holm P=')],'S12 contrast row 1')
-    set_row(r'sham background only - wound only',[C('sham_background_only - wound_only').replace('; Holm-adjusted P=',', Holm P=')],'S12 contrast row 2')
+    set_row(r'background only - wound only',[C('background_only - wound_only').replace('; Holm-adjusted P=',', Holm P=')],'S12 contrast row 1',table_hint='DINOv2')
+    set_row(r'sham background only - wound only',[C('sham_background_only - wound_only').replace('; Holm-adjusted P=',', Holm P=')],'S12 contrast row 2',table_hint='DINOv2')
     R(r'Only the two paired contrasts with unadjusted P<0\.05 are listed; after Holm adjustment across the five contrasts, only the second remains significant \(P=0\.041\)\. BiomedCLIP intervals overlap across all five conditions\.',
       f"The two listed contrasts are the same two shown in the earlier version; P values are Holm-adjusted across the five contrasts of the family, of which {len(sig)} remain significant. BiomedCLIP intervals overlap across all five conditions.",'S12 footnote')
     R(r'Frozen foundation-model features placed the true wound region lowest of the five conditions, as the fine-tuned model did, but did not reproduce the wider ordering, and the one area-matched contrast available to them was null; they therefore corroborate only the weakest part of the claim\.',
@@ -180,11 +184,11 @@ if len(lc)==6:
       f'EfficientNet-B0 mean AUROC was {f3(m3)}±{f3(s3_)} with one-third of training patients, {f3(m6)}±{f3(s6)} with two-thirds, and {f3(mf)}±{f3(sf)} with the full training set','S2 sentence 1')
     R(r'The mean therefore gained substantially between one-third and two-thirds of the training data \(\+0\.136\) and did not gain further beyond it \(−0\.010\)',
       f'The mean therefore changed by {s3(m6-m3)} between one-third and two-thirds of the training data and by {s3(mf-m6)} beyond it','S2 sentence 2')
-    set_row(r'One-third',[f'{f3(m3)}±{f3(s3_)}',None],'S2 one-third'); set_row(r'Two-thirds',[f'{f3(m6)}±{f3(s6)}',None],'S2 two-thirds'); set_row(r'Full',[f'{f3(mf)}±{f3(sf)}',None],'S2 full',table_hint='Mean')
+    set_row(r'One-third',[f'{f3(m3)}±{f3(s3_)}',None],'S2 one-third',table_hint='Training fraction'); set_row(r'Two-thirds',[f'{f3(m6)}±{f3(s6)}',None],'S2 two-thirds',table_hint='Training fraction'); set_row(r'Full',[f'{f3(mf)}±{f3(sf)}',None],'S2 full',table_hint='Training fraction')
     means={'One-third':m3,'Two-thirds':m6,'Full':mf}; sds={'One-third':s3_,'Two-thirds':s6,'Full':sf}
     def interp(k):
         v=means[k]; w='Highest mean' if v==max(means.values()) else ('Lowest mean' if v==min(means.values()) else 'Intermediate mean'); return f"{w}; three-seed SD {f3(sds[k])}"
-    set_row(r'One-third',[None,interp('One-third')],'S2 interp one-third'); set_row(r'Two-thirds',[None,interp('Two-thirds')],'S2 interp two-thirds'); set_row(r'Full',[None,interp('Full')],'S2 interp full',table_hint='Mean')
+    set_row(r'One-third',[None,interp('One-third')],'S2 interp one-third',table_hint='Training fraction'); set_row(r'Two-thirds',[None,interp('Two-thirds')],'S2 interp two-thirds',table_hint='Training fraction'); set_row(r'Full',[None,interp('Full')],'S2 interp full',table_hint='Training fraction')
     R(r'However, mean performance rose substantially between one-third and two-thirds of the training patients but not beyond, and the small number of events limits resolution\.',
       f'Mean performance changed by {s3(m6-m3)} between one-third and two-thirds of the training patients and by {s3(mf-m6)} beyond that, differences that the three-seed spread contains, and the small number of events limits resolution.','S2 discussion sentence')
 else: LOG.append(f'PENDING S2 learning curve ({len(lc)}/6 runs)')

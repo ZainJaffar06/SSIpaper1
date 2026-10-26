@@ -1,0 +1,4 @@
+file,patient_auroc
+maskimage_seed20260807.csv,0.5823
+maskimage_seed42.csv,0.5011
+maskimage_seed7.csv,0.6004

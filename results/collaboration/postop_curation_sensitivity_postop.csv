@@ -1,0 +1,2 @@
+n_photos,n_pts,n_events,auroc,lo,hi,n_intraop_removed,caveat
+3110,225,18,0.6777,0.5359,0.8046,629,OOF proba from the original expanded-frame model; images no longer on disk so not retrained

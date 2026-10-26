@@ -1,0 +1,2 @@
+n_images,iou_median,iou_mean,iou_max,frac_le_0_05,frac_le_0_01,n_gt_0_05,area_preserved
+1296,0.0,0.0006,0.109,0.9961,0.9853,5,True

@@ -1,0 +1,6 @@
+feature,auroc,lo,hi
+binary_mask_image_frozen,0.5438,0.3632,0.7151
+scalar_geometry_7,0.6795,0.5067,0.8289
+mask_area_only,0.3088,0.1399,0.4948
+full_image_same_frame_3seed_mean,0.7493,,
+geometry_minus_full_image,-0.0698,,

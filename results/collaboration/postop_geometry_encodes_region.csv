@@ -1,0 +1,8 @@
+feature,auroc_for_region,chest_mean,abdomen_mean
+area,0.6909,0.0604,0.0689
+centroid_y,0.7433,0.4647,0.5109
+centroid_x,0.406,0.4861,0.472
+bbox_h,0.5109,0.6131,0.5931
+bbox_w,0.831,0.1642,0.2675
+elongation,0.1341,4.2765,2.8085
+fill_ratio,0.1729,0.676,0.5267

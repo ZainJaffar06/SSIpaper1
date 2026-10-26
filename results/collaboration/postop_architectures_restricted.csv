@@ -1,0 +1,4 @@
+architecture,full_frame_3seed_mean,masking_frame_3seed_mean,shift,n_pts_restricted,n_events_restricted
+resnet18,0.7355,0.7943,0.0589,168,12
+efficientnet_b0,0.7124,0.7646,0.0522,168,12
+vit_b_16,0.74,0.7534,0.0134,168,12

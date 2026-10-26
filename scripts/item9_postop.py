@@ -50,12 +50,17 @@ def probe_oof(F):
 rows=[]; PAT={}
 for ename,(enc,mean,std) in ENC.items():
     for cname,cond in COND.items():
-        t0=time.time(); F=embed(enc,mean,std,cond); oof=probe_oof(F)
-        g=pd.DataFrame({"pid":pid,"y":y,"p":oof}).groupby("pid").agg(y=("y","max"),p=("p","mean")); PAT[(ename,cname)]=g
+        t0=time.time(); cache=os.path.join(DER,f"item9_patientscores_dinov2_{cname}_postop.csv"); dim=768
+        if ename=="dinov2_vitb14" and os.path.exists(cache):   # resume: patient scores saved by an earlier run
+            g=pd.read_csv(cache).set_index("pid")[["y","p"]]; print(f"  resume {cname} from cache",flush=True)
+        else:
+            F=embed(enc,mean,std,cond); oof=probe_oof(F); dim=F.shape[1]
+            g=pd.DataFrame({"pid":pid,"y":y,"p":oof}).groupby("pid").agg(y=("y","max"),p=("p","mean"))
+        PAT[(ename,cname)]=g
         au=safe_auroc(g.y,g.p); _,lo,hi=cluster_boot_ci(g.index.values,g.y.values,g.p.values,safe_auroc,20000,913)
-        rows.append(dict(encoder=ename,condition=cname,dim=F.shape[1],auroc=round(au,4),lo=round(lo,4),hi=round(hi,4)))
+        rows.append(dict(encoder=ename,condition=cname,dim=dim,auroc=round(au,4),lo=round(lo,4),hi=round(hi,4)))
         print(f"  {ename:18s} {cname:22s} {au:.4f} ({lo:.3f}-{hi:.3f}) [{time.time()-t0:.0f}s]",flush=True)
-        if ename=="dinov2_vitb14": g.reset_index().to_csv(os.path.join(DER,f"item9_patientscores_dinov2_{cname}_postop.csv"),index=False)
+        if ename=="dinov2_vitb14" and not os.path.exists(cache): g.reset_index().to_csv(cache,index=False)
 out=pd.DataFrame(rows); out.to_csv(os.path.join(DER,"foundation_probes_postop.csv"),index=False)
 # paired contrasts, DINOv2, same five pairs as the published family
 pairs=[("background_only","wound_only"),("sham_background_only","wound_only"),("sham_wound_only","wound_only"),("full_image","wound_only"),("background_only","full_image")]

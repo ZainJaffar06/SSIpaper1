@@ -1,0 +1,6 @@
+contrast,d,lo,hi,p,holm_p
+sham_wound_only - wound_only,0.1309,-0.0667,0.355,0.206,1.0
+background_only - wound_only,0.1255,-0.1241,0.3846,0.3226,1.0
+sham_background_only - wound_only,0.0983,-0.1021,0.3257,0.3553,1.0
+full_image - wound_only,0.0897,-0.1341,0.3326,0.4381,1.0
+background_only - full_image,0.0358,-0.0684,0.1824,0.6305,1.0

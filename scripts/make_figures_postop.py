@@ -81,7 +81,7 @@ def figure3():
     ax.grid(axis="y",color=GRID,lw=0.8); ax.set_axisbelow(True); ax.set_ylabel("AUROC",fontsize=11.5,rotation=0,labelpad=24,va="center")
     ax.legend(loc="upper center",bbox_to_anchor=(0.5,-0.14),ncol=4,frameon=False,fontsize=10.5)
     ax2=f.add_axes([0.59,0.22,0.28,0.53]); panel_title(ax2,"B","CNN minus context-probe AUROC by seed",x=0.50)
-    probes=[("Postoperative day","pod_only"),("Acquisition features","acquisition"),("Prior acquisition behavior","behavior_past_only"),("All context features","acquisition+behavior+pod")]
+    probes=[("Postoperative day","pod_only"),("Acquisition features","acquisition"),("Prior imaging behavior","behavior_past_only"),("All context features","acquisition+behavior+pod")]
     cnn={int(r.seed):float(r.cnn_auroc) for r in dl.itertuples()}
     allx=[]
     for i,(lab,key) in enumerate(probes):

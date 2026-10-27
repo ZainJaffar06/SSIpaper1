@@ -75,7 +75,7 @@ RR(r'available for \[PENDING\] of 171 patients and unambiguous',f'available for 
 d.set_row(r'Incision region \(derived from procedure text\)',[None,None,'0 (0%)'],'Table 1 region missing cell',table_hint='Characteristic'); CH.append(('Table 1 incision-region row','Missing column 2 (1%) -> 0 (0%); the two unclassified patients are counted once, in the Other row'))
 # Table 2 photographs per patient (pandas default quantiles, same as the text)
 d.set_row(r'Photographs per patient, median \(IQR\)',[f'{qa[0]} ({qa[1]}{EN}{qa[2]})',f'{qs[0]} ({qs[1]}{EN}{qs[2]})',f'{qn[0]} ({qn[1]}{EN}{qn[2]})'],'Table 2 photographs per patient',table_hint='Photographs per patient'); CH.append(('Table 2 photographs per patient',f'all {qa[0]} ({qa[1]}-{qa[2]}), SSI {qs[0]} ({qs[1]}-{qs[2]}), no SSI {qn[0]} ({qn[1]}-{qn[2]}) (pandas default quantiles)'))
-RR(r'median of 6 photographs overall \(IQR,? 4[–-]9',f'median of {qa[0]} photographs overall (IQR, {qa[1]}{EN}{qa[2]}','text photographs per patient IQR')
+RR(r'median of 6 photographs overall \(interquartile range, 4–9;',f'median of {qa[0]} photographs overall (interquartile range, {qa[1]}{EN}{qa[2]};','text photographs per patient IQR')
 # ================= B. truncation =================
 RR(r'changed patient-level AUROC by \[PENDING\] relative to the all-image score\. \[PENDING: one sentence interpreting the result\]',
    f'changed patient-level AUROC by {s3(d0)} (95% CI, {cito(tr_lo,tr_hi)}; P={ptr:.2f}) relative to the all-image score, from {f3(safe_auroc(yv,A.p))} to {f3(safe_auroc(yv,Bq.p))}. {"Two" if nlost==2 else nlost} SSI-positive patients whose photographs were all obtained on or after diagnosis contribute no prediagnosis score, so the comparison covers {len(common)} patients and {int(yv.sum())} events; photographs obtained on or after diagnosis raised the all-image estimate only within its bootstrap uncertainty.','p11 truncation')
@@ -157,15 +157,15 @@ RR(r'AUPRC was emphasized because SSI prevalence was low \[Reference\]','AUPRC w
 RR(r'Decision-curve analyses were treated as secondary \[Reference\]','Decision-curve analyses were treated as secondary [44]','ref: DCA -> Vickers & Elkin [44]')
 RR(r'20,000 patient-level bootstrap resamples \[Reference\]','20,000 patient-level bootstrap resamples [45]','ref: bootstrap -> Efron & Tibshirani [45]')
 # mapping fixes from Mahdi's REFERENCES comment
-RR(r'termed shortcut learning \[10\]','termed shortcut learning [34]','ref fix: shortcut learning -> Geirhos [34]')
-RR(r'where models encoded hospital and acquisition characteristics \[11,12\]','where models encoded hospital and acquisition characteristics [10,11]','ref fix: chest radiography -> DeGrave, Zech [10,11]')
-RR(r'reduced performance to chance \[13\]','reduced performance to chance [12]','ref fix: hip fracture -> Badgeley [12]')
+RR(r'well recognized in medical imaging \[10\]','well recognized in medical imaging [34]','ref fix: shortcut learning -> Geirhos [34]')
+RR(r'(chest radiograph[^.\[]{0,160})\[11,12\]',r'\1[10,11]','ref fix: chest radiography -> DeGrave, Zech [10,11]')
+RR(r'(fracture detection[^.\[]{0,200})\[13\]',r'\1[12]','ref fix: hip fracture -> Badgeley [12]')
 RR(r'signature of shortcut learning reported in other imaging domains \[10,11\]','signature of shortcut learning reported in other imaging domains [34,10]','ref fix: Discussion signature -> [34,10]')
 RR(r'apparent discrimination in other imaging models \[13\]','apparent discrimination in other imaging models [12]','ref fix: Limitations -> Badgeley [12]')
 RR(r'within a single cohort provide a complementary check \[7\]','within a single cohort provide a complementary check [13]','ref fix: acquisition-bias method -> Ong Ly [13]')
 RR(r'\(CDC/NHSN\) criteria \[24\]','(CDC/NHSN) criteria [38]','ref fix: NHSN -> [38]')
-RR(r'SurgWound([^.\[]{0,120})\[34\]',r'SurgWound\1[24]','ref fix: SurgWound [34] -> [24]')
-n17=RR(r' \[17\]','','ref fix: Norman [17] removed (does not support its sentence)')
+RR(r'(SurgWound[^\[]{0,220})\[34\]',r'\1[24]','ref fix: SurgWound [34] -> [24]')
+RR(r' \[17\]','','ref fix: Norman [17] removed, site 1'); RR(r'more likely to be infected \[17\]','more likely to be infected','ref fix: Norman [17] removed, site 2')
 # append the new entries after the last reference paragraph (entries are non-empty paragraphs after the REFERENCES heading)
 body=d.root.find(W+'body'); kids=list(body); ptext=lambda p:''.join(t.text or '' for t in p.iter(W+'t'))
 i0=next(i for i,k in enumerate(kids) if k.tag==W+'p' and ptext(k).strip().lower()=='references'); last=None
@@ -184,13 +184,16 @@ figs={'rId12':REPO+'figures/figure1_flow_postop.png','rId13':D+'figures/figure2_
 z=zipfile.ZipFile(OUT); rels=z.read('word/_rels/document.xml.rels').decode(); target={rid:re.search(r'Id="'+rid+r'"[^>]*Target="([^"]+)"',rels).group(1) for rid in figs}
 docxml=z.read('word/document.xml').decode()
 EMU_W=6629400
+sizes={}
 for rid,png in figs.items():
-    w,h=Image.open(png).size; cy=int(round(EMU_W*h/w)); cx=EMU_W
+    w,h=Image.open(png).size; cx=EMU_W; cy=int(round(EMU_W*h/w))
     if cy>6858000: cy=6858000; cx=int(round(cy*w/h))
-    # the drawing that embeds rid: set its wp:extent and a:ext
-    m=re.search(r'(<w:drawing>.*?r:embed="'+rid+r'".*?</w:drawing>)',docxml,re.S); blk=m.group(1)
-    new=re.sub(r'<wp:extent cx="\d+" cy="\d+"/>',f'<wp:extent cx="{cx}" cy="{cy}"/>',blk); new=re.sub(r'<a:ext cx="\d+" cy="\d+"/>',f'<a:ext cx="{cx}" cy="{cy}"/>',new)
-    docxml=docxml.replace(blk,new)
+    sizes[rid]=(cx,cy)
+def fixblk(m):
+    blk=m.group(0); rid=re.search(r'r:embed="(rId\d+)"',blk)
+    if not rid or rid.group(1) not in sizes: return blk
+    cx,cy=sizes[rid.group(1)]; blk=re.sub(r'<wp:extent cx="\d+" cy="\d+"/>',f'<wp:extent cx="{cx}" cy="{cy}"/>',blk); return re.sub(r'<a:ext cx="\d+" cy="\d+"/>',f'<a:ext cx="{cx}" cy="{cy}"/>',blk)
+docxml=re.sub(r'<w:drawing>(?:(?!</w:drawing>).)*?</w:drawing>',fixblk,docxml,flags=re.S)
 tmp=OUT+'.tmp'; zo=zipfile.ZipFile(tmp,'w',zipfile.ZIP_DEFLATED)
 for item in z.infolist():
     data=z.read(item.filename)
@@ -201,18 +204,18 @@ for item in z.infolist():
 zo.close(); z.close(); shutil.move(tmp,OUT); CH.append(('Figures 1-4','images replaced with the postoperative versions (Figure 1 rescaled to its portrait aspect; Figures 2-4 keep the slot size)'))
 # ================= J. comment replies =================
 REPLY={
- 0:f'Of the 13 SSI patients in the postoperative frame, {n30} were diagnosed within 30 days, one later (POD {late[0]}) and one has no diagnosis date. The POD 47 patient is not in this frame (no postoperative photograph passed the gate). Filled in Results and in Outcome Ascertainment.',
- 1:f'Pandas default quantiles (linear interpolation) give all {qa[0]} ({qa[1]}-{qa[2]}), SSI {qs[0]} ({qs[1]}-{qs[2]}), no SSI {qn[0]} ({qn[1]}-{qn[2]}); the earlier 4-9 came from lower-interpolation quantiles. Text and Table 2 now both use the default. Range 1-39 confirmed.',
- 3:'Confirmed: 0.085-0.742 is the patient-clustered bootstrap percentile interval (20,000 resamples, seed 913) of the AUPRC on the POD 7 risk set; recomputed today and added to the repo as postop_primary_auprc_ci.csv.',
- 5:f'Added: slope {f2h(cc.slope)} (95% CI, {f2h(cc.slope_lo)} to {f2h(cc.slope_hi)}) and intercept {f2h(cc.intercept)} (95% CI, {f2h(cc.intercept_lo)} to {f2h(cc.intercept_hi)}), patient-clustered bootstrap with 20,000 resamples (postop_calibration_ci.csv); also in Supplementary Table S6.',
- 6:'Confirmed: the full-cohort image score is the patient mean over all 1,341 postoperative photographs, including those taken on or after diagnosis.',
- 8:'Confirmed: each photograph was linked to the participant and acquisition date, POD was computed from the surgery date, study identifiers were assigned and direct identifiers removed before analysis; the 9 photographs without a derivable day were excluded.',
- 13:'Fixed as listed: shortcut learning [34]; chest radiography [10,11]; hip fracture [12]; Discussion signature [34,10]; Limitations [12]; acquisition-bias method [13]; NHSN [38]; SurgWound [24]; DINOv2 and BiomedCLIP [30,31] at first mention. Norman 2022 does not support the sentence it was on (it is a Cochrane review of negative-pressure wound therapy), so I removed that citation. The 12 [Reference] placeholders are cited; seven new entries [39]-[45] were added for calibration measures, the landmark method, the add-one permutation P value, stacking, AUPRC under low prevalence, decision-curve analysis and the bootstrap, each checked against its publisher.',
- 14:f'{ntrk} of the 171 patients have no record in the tracker; filled in the footnote.',
- 15:f'Region from the keyword rule: chest 120, abdomen 49, and 2 patients not classified by the rule (the two lower-extremity incisions), so it is available for {nreg} of 171. In Table 1 those two are the Other row; the Missing column for incision region is now 0 (0%), so the rows add to 171.',
- 18:'The rated set contains 468 images: 277 are postoperative photographs of the locked frame and 191 are not in the locked frame (they came from the uncurated export). I cannot confirm from the rating file that none of those 191 is intraoperative, so this section should be restricted to the 277 postoperative images (which I can re-run) or removed; I have left the text unchanged pending your decision.',
- 19:'All four figures are replaced with the postoperative versions (Figure 1 from figure1_flow_postop.png; Figures 2-4 from scripts/make_figures_postop.py, drawn from the result CSVs).',
- 20:'Happy to add the permutation null (permutation_null.csv, Table S10) as Figure 4C if Dr. Kewalramani wants it; not added in this pass so the figure set matches the captions already reviewed.'}
+ 0:f'{n30} within 30 days, 1 later (POD {late[0]}) and 1 with no diagnosis date. The POD 47 patient is not in this frame, none of their photos passed the gate. I put the same numbers in Outcome Ascertainment.',
+ 1:f'You are right, I had used the lower quantile. With pandas default it is {qa[0]} ({qa[1]}-{qa[2]}) overall, {qs[0]} ({qs[1]}-{qs[2]}) SSI, {qn[0]} ({qn[1]}-{qn[2]}) no SSI. Changed the text and Table 2 to match. Range 1-39 is right.',
+ 3:'Yes, 0.085-0.742 is the patient-clustered bootstrap on the POD 7 risk set (20,000 resamples, seed 913, same as the AUROC CI). I reran it today to be sure and added it to the repo as postop_primary_auprc_ci.csv.',
+ 5:f'Added them: slope {f2h(cc.slope)} ({f2h(cc.slope_lo)} to {f2h(cc.slope_hi)}), intercept {f2h(cc.intercept)} ({f2h(cc.intercept_lo)} to {f2h(cc.intercept_hi)}). Same bootstrap, 20,000 resamples. Also in S6 now (postop_calibration_ci.csv in the repo).',
+ 6:'Yes. It is the mean over all 1,341 postop photos per patient, so photos taken on or after diagnosis are in it.',
+ 8:'Confirmed. Every photo was linked to the participant and the date, POD from the surgery date, then study IDs assigned and identifiers stripped before anything else. The 9 photos we could not date were dropped.',
+ 13:'Went through all of them against the sentences. Fixed: shortcut learning [34], chest radiography [10,11], hip fracture [12], the Discussion one [34,10], Limitations [12], acquisition-bias method [13], NHSN [38], SurgWound [24], and DINOv2/BiomedCLIP [30,31] at first mention. Norman 2022 does not support the sentence it was on (it is the Cochrane NPWT review), so I took it off rather than leave a wrong citation, which means [17] is now uncited. The 12 [Reference] spots are filled; I added 7 new entries ([39]-[45]) for calibration, the landmark method, the add-one P value, stacking, AUPRC, decision curves and the bootstrap, and checked each DOI resolves to the paper.',
+ 14:f'{ntrk}. Filled in.',
+ 15:f'From the keyword rule: chest 120, abdomen 49, and 2 that the rule could not classify (the two lower-extremity ones), so {nreg} of 171. In Table 1 those 2 are the Other row, so the missing cell for region should be 0, I changed it. Rows now add to 171.',
+ 18:'Partly. 277 of the 468 rated images are postop photos from the locked frame, the other 191 came from the uncurated export and I cannot tell from the rating file whether any of those are intraoperative. I left the section alone for now. I can rerun it on the 277 or we drop it, whichever you prefer.',
+ 19:'Done, all four swapped for the postop versions (Figure 1 from figure1_flow_postop.png, 2-4 from make_figures_postop.py).',
+ 20:'I can add the permutation null as Figure 4C if Dr. Kewalramani wants it, it is a quick one from permutation_null.csv. Did not add it in this pass so the figures still match the captions you reviewed.'}
 W14='http://schemas.microsoft.com/office/word/2010/wordml'; W15='http://schemas.microsoft.com/office/word/2012/wordml'; W16CID='http://schemas.microsoft.com/office/word/2016/wordml/cid'; W16CEX='http://schemas.microsoft.com/office/word/2018/wordml/cex'
 z=zipfile.ZipFile(OUT); parts={n:z.read(n) for n in z.namelist()}; z.close()
 com=ET.fromstring(parts['word/comments.xml']); cex=ET.fromstring(parts['word/commentsExtended.xml']); cid=ET.fromstring(parts['word/commentsIds.xml']); cexx=ET.fromstring(parts['word/commentsExtensible.xml']); ppl=ET.fromstring(parts['word/people.xml']); docx_=ET.fromstring(parts['word/document.xml'])

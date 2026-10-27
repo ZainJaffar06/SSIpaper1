@@ -44,7 +44,9 @@ b=dedup(pd.read_csv(P1+'base/ssi_smartphone.csv',low_memory=False)); DX=b.assign
 dx={p:DX.get(p,np.nan) for p in ssi}; n30=sum(1 for v in dx.values() if not pd.isna(v) and v<=30); late=sorted(int(v) for v in dx.values() if not pd.isna(v) and v>30); nund=sum(1 for v in dx.values() if pd.isna(v))
 assert len(ssi)==13 and n30+len(late)+nund==13
 rp=pd.read_csv(REPO+'results/MASTER_map_1948_seed42.csv'); cnt=P.assign(image_id=rp.image_id.values[keep]).groupby('pid').size(); yy=cnt.index.isin(FINAL)
-q=lambda s:(int(s.median()),int(s.quantile(.25)),int(s.quantile(.75)))
+from decimal import Decimal as _D, ROUND_HALF_UP as _H
+hu=lambda v:int(_D(str(float(v))).quantize(_D('1'),rounding=_H))
+q=lambda s:(hu(s.median()),hu(s.quantile(.25)),hu(s.quantile(.75)))   # Q3 of the overall count is 9.5 -> 10, as Mahdi computed
 qa,qs,qn=q(cnt),q(cnt[yy]),q(cnt[~yy])
 B=pd.read_csv(os.environ.get('TRACKER_CSV','<local PHI tracker, not in repo>'),encoding='latin-1',low_memory=False); B.columns=[c.strip() for c in B.columns]
 ntrk=len([p for p in pids if p not in set(B['SUBJECT ID'].astype(str).str.strip().str.upper().str.replace(' ','',regex=False))])

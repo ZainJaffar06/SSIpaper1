@@ -111,7 +111,7 @@ def run_fold(arch, fr, yv, tr, te, epochs=12):
             xb=torch.from_numpy(fr.batch(loc)).to(DEV).float().permute(0,3,1,2)/255.0
             xb=((xb-MEAN.to(DEV))/STD.to(DEV)).contiguous()
             pr.append(torch.softmax(model(xb),1)[:,1].cpu().numpy())
-    del model
+    del model, opt; import gc; gc.collect()
     if DEV=="mps": torch.mps.empty_cache()
     return np.concatenate(pr)
 
@@ -124,19 +124,33 @@ def cv(tag, arch, fr, yv, p_, f_, img_, seed, frac=1.0):
     if os.path.exists(fp): print("skip",tag,flush=True); return
     torch.manual_seed(seed); np.random.seed(seed); rng=np.random.default_rng(seed)
     t0=time.time(); oof=np.full(len(yv),np.nan)
+    # per-fold checkpoint: a restart loses at most one fold. The training-patient subsample for each
+    # fold is drawn from rng in fold order, so draws are replayed for completed folds to keep them identical.
+    ck=os.path.join(OUT,f"{tag}.partial.npz"); done=set()
+    if os.path.exists(ck):
+        z=np.load(ck); oof=z["oof"]; done=set(int(x) for x in z["done"]); print(f"  {tag}: resuming, folds done {sorted(done)}",flush=True)
     for k in sorted(np.unique(f_)):
         tr=np.where(f_!=k)[0]; te=np.where(f_==k)[0]
         if frac<1.0:
             tp=np.unique(p_[tr]); sel=set(rng.choice(tp,max(2,int(round(len(tp)*frac))),replace=False))
             tr=tr[np.isin(p_[tr],list(sel))]
+        if int(k) in done: continue
         if len(np.unique(yv[tr]))<2:
             print(f"  {tag} fold {int(k)}: single-class training split, skipped",flush=True); continue
-        oof[te]=run_fold(arch,fr,yv,tr,te)
+        oof[te]=run_fold(arch,fr,yv,tr,te); done.add(int(k))
+        np.savez(ck,oof=oof,done=np.array(sorted(done)))
         print(f"  {tag} fold {int(k)} done ({time.time()-t0:.0f}s)",flush=True)
+        _F=globals().get("_FOLDS",0)+1; globals()["_FOLDS"]=_F
+        if os.environ.get("MAX_FOLDS") and _F>=int(os.environ["MAX_FOLDS"]) and len(done)<len(np.unique(f_)):
+            print("MAX_FOLDS reached; exiting so the next fold starts in a fresh process",flush=True); import sys; sys.exit(0)
     pd.DataFrame({"pid":p_,"image_id":img_,"fold":f_,"y_true":yv,"proba":oof}).to_csv(fp,index=False)
+    if os.path.exists(ck): os.remove(ck)
+    global _RUNS; _RUNS=globals().get("_RUNS",0)+1
     m=~np.isnan(oof)
     print(f"{tag}: image {roc_auc_score(yv[m],oof[m]):.4f} patient {pat_auc(p_[m],yv[m],oof[m]):.4f} "
           f"({(time.time()-t0)/60:.1f} min)",flush=True)
+    if os.environ.get("MAX_RUNS") and _RUNS>=int(os.environ["MAX_RUNS"]):
+        print("MAX_RUNS reached; exiting so the next run starts in a fresh process",flush=True); import sys; sys.exit(0)
 
 ALL=np.arange(len(P))
 # ---------------- STAGE 1 ----------------

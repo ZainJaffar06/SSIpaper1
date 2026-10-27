@@ -1,0 +1,2 @@
+n_pts,n_events,auroc_all,auroc_prediagnosis,delta,lo,hi,p_midp,ssi_pts_without_prediagnosis_photo
+168,10,0.8184,0.7791,-0.0392,-0.138,0.0057,0.6343,2

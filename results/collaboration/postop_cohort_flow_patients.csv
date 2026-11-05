@@ -1,0 +1,9 @@
+step,patients,ssi,no_ssi,note
+Outcome-labelled patients (surveillance list + corrected positive roster),267,26,241,
+  excluded: no image of any kind in the annotation tracker,11,1,10,SSI: RU-A1365
+"  excluded: thermal images only, no smartphone photograph",37,3,34,"SSI: RU-A1104, RU-A1195, RU-A1303"
+  excluded: smartphone photographs but none passed the quality gate,9,2,7,"SSI: RU-A1108, RU-A1163"
+      annotator status EXCLUDED/LOW QUALITY,6,2,4,
+      image bytes not retrievable,3,0,3,
+Locked cohort: >=1 gate-passing smartphone photograph,210,20,190,
+(outside the flow) tracker patients with no outcome label,75,0,75,not in surveillance list; never modelled

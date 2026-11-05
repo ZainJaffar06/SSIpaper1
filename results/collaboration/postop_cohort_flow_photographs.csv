@@ -1,0 +1,16 @@
+step,photos
+"smartphone image identities in the annotation tracker, labelled patients",3292
+  excluded: annotator status EXCLUDED/LOW QUALITY,916
+  excluded: other quality flag (Q1-Q4/Q6),276
+  excluded: Q5 dressing,68
+  excluded: exclusion note,22
+  excluded: image bytes not retrievable,16
+  excluded: incision geometry not annotated,0
+  excluded: hash conflict / other,15
+primary-eligible smartphone photographs,1979
+  within-patient duplicate paths removed,31
+locked analytic frame,1948
+"  intraoperative (280 pre-closure, 318 post-closure)",598
+  no derivable postoperative day,9
+postoperative frame,1341
+  through POD 7 (postoperative frame),544

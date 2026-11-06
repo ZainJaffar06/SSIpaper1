@@ -7,16 +7,16 @@ unnumbered photos, and a single shared fold map for modality comparison/fusion.
 
 `pid, fold, y_true, n_smartphone, n_thermal, source`
 
-**289 patients, 26 SSI.** `y_true` is the final 26-patient SSI list confirmed by
+**293 patients, 26 SSI.** `y_true` is the final 26-patient SSI list confirmed by
 Dr. Kewalramani (`final_ssi_list.txt`); no other label source is used. Folds:
 
 | Fold | Patients | SSI |
 |---|---|---|
-| 0 | 58 | 7 |
+| 0 | 59 | 7 |
 | 1 | 59 | 5 |
-| 2 | 58 | 4 |
-| 3 | 57 | 5 |
-| 4 | 57 | 5 |
+| 2 | 59 | 4 |
+| 3 | 58 | 5 |
+| 4 | 58 | 5 |
 
 Assembled in layers, each added without moving anyone already placed (asserted in
 code): 210 patients inherit their fold from the published smartphone master map
@@ -24,6 +24,8 @@ code): 210 patients inherit their fold from the published smartphone master map
 patients with no images in the locked package; and 65 further thermal patients
 from the 2026-09-29 thermal list, assigned by stratified split (seed 42). Two of
 that list's 67 IDs (RU-A1108, RU-A1195) were already present, hence 65 new.
+On 2026-10-04, 4 thermal-only patients recovered from AWS (all SSI-negative) were
+added to the least-loaded folds, 289 -> 293, again without moving anyone.
 Every patient in v1 and in the v2 interim file keeps the same fold, so all
 published smartphone results stand unchanged.
 

@@ -148,13 +148,15 @@ postoperative stage, not SSI.
 
 ## Fold map v2 (`SHARED_fold_map_v2.csv`) — final
 
-289 patients, 26 SSI, folds 58/59/58/57/57 and 7/5/4/5/5. Built in layers, none
+293 patients, 26 SSI, folds 59/59/59/58/58 and 7/5/4/5/5. Built in layers, none
 of which moves a patient already placed (asserted in code): 210 from the
 published smartphone master map (seed 42), 11 thermal-only from v1, 3 SSI
 patients with no images in the locked package, and 65 from the 2026-09-29
 thermal list by stratified assignment (seed 42). Two of that list's 67 IDs
 (RU-A1108, RU-A1195) were already in the map, so 65 were new; none of the 65 is
-SSI-positive. v1 and the interim file are superseded and kept for provenance.
+SSI-positive. On 2026-10-04, 4 thermal-only SSI-negative patients recovered from AWS
+were added to the least-loaded folds (289 -> 293); no existing patient moved.
+v1 and the interim file are superseded and kept for provenance.
 
 ### On rebalancing
 

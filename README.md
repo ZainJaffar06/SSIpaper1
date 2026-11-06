@@ -60,10 +60,15 @@ src/
   09_packaging/           exports, figures, canonical reproducibility addendum,
                           path de-identification
 results/
-  canonical/              SOURCE OF TRUTH: patient-level OOF scores + canonical metrics
+  canonical/              patient-level OOF scores + metrics of the original (pre-correction)
+                          label set; superseded, do not use for new work
                           (20,000-resample bootstrap, dedicated seed)
   master_models/          per-architecture x seed OOF predictions on the frozen master map
-  MASTER_map_1948_seed42.csv   the single image-to-fold map used by every analysis
+  MASTER_map_1948_seed42.csv   the single image-to-fold map used by every analysis.
+                          FOLDS ONLY: its y_true column predates the final label set.
+                          Labels come from collaboration/final_ssi_list.txt; for any new
+                          model use collaboration/SHARED_fold_map_v2.csv (patient level,
+                          final labels) or collaboration/per_photo_frame_1948.csv (image level)
   round1/ round2/ round3/ historical outputs from each PI review round (see note below)
 figures/                  all manuscript and supplementary figures
 docs/                     round summaries, data reconciliation, methods confirmation

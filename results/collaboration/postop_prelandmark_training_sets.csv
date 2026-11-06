@@ -1,0 +1,11 @@
+variant,test_fold,train_photos,train_patients,train_events
+trainpod7,0,454,108,9
+trainpod7,1,452,110,11
+trainpod7,2,420,106,7
+trainpod7,3,410,106,9
+trainpod7,4,440,110,8
+trainpredx,0,1108,138,8
+trainpredx,1,1077,134,10
+trainpredx,2,997,133,7
+trainpredx,3,990,131,9
+trainpredx,4,1028,136,6

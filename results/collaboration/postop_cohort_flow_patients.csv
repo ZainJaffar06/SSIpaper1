@@ -6,4 +6,4 @@ Outcome-labelled patients (surveillance list + corrected positive roster),267,26
       annotator status EXCLUDED/LOW QUALITY,6,2,4,
       image bytes not retrievable,3,0,3,
 Locked cohort: >=1 gate-passing smartphone photograph,210,20,190,
-(outside the flow) tracker patients with no outcome label,75,0,75,not in surveillance list; never modelled
+(outside the flow) tracker patients with no outcome label,74,0,74,not in surveillance list; never modelled (corrected 2026-11-06: an unresolved tracker row listing several patient numbers had been counted as a 75th patient)

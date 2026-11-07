@@ -1,0 +1,5 @@
+contrast,variant,seed,estimand,n_pts,n_events,d,lo,hi,p
+prelandmark_trainpod7_resnet18_seed20260807 - primary,trainpod7,20260807,"POD 7, mean through POD 7",132,8,-0.1986,-0.3413,-0.0691,0.0026
+prelandmark_trainpod7_resnet18_seed20260807 - primary,trainpod7,20260807,"all photographs, patient mean",171,13,-0.1568,-0.3171,0.0206,0.0776
+prelandmark_trainpredx_resnet18_seed20260807 - primary,trainpredx,20260807,"POD 7, mean through POD 7",132,8,-0.0181,-0.1783,0.1265,0.8578
+prelandmark_trainpredx_resnet18_seed20260807 - primary,trainpredx,20260807,"all photographs, patient mean",171,13,-0.0492,-0.1838,0.0823,0.4597

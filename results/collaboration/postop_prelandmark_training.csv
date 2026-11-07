@@ -1,0 +1,7 @@
+run,variant,seed,estimand,n_pts,n_events,auroc,lo,hi,auprc
+"primary (resnet18_seed20260807, trained on all postoperative photographs)",all photographs,20260807,"POD 7, mean through POD 7",132,8,0.7046,0.4656,0.9211,0.3765
+"primary (resnet18_seed20260807, trained on all postoperative photographs)",all photographs,20260807,"all photographs, patient mean",171,13,0.7731,0.577,0.926,0.3077
+prelandmark_trainpod7_resnet18_seed20260807,trainpod7,20260807,"POD 7, mean through POD 7",132,8,0.506,0.2891,0.7246,0.0755
+prelandmark_trainpod7_resnet18_seed20260807,trainpod7,20260807,"all photographs, patient mean",171,13,0.6164,0.4416,0.7743,0.1174
+prelandmark_trainpredx_resnet18_seed20260807,trainpredx,20260807,"POD 7, mean through POD 7",132,8,0.6865,0.5393,0.8313,0.1193
+prelandmark_trainpredx_resnet18_seed20260807,trainpredx,20260807,"all photographs, patient mean",171,13,0.724,0.5723,0.8595,0.2078

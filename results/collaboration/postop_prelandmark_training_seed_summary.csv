@@ -1,0 +1,5 @@
+variant,estimand,n_seeds,mean,sd
+trainpod7,"POD 7, mean through POD 7",1,0.506,
+trainpod7,"all photographs, patient mean",1,0.6164,
+trainpredx,"POD 7, mean through POD 7",1,0.6865,
+trainpredx,"all photographs, patient mean",1,0.724,

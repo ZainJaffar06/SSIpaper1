@@ -1,0 +1,13 @@
+contrast,seed,estimand,n_pts,n_events,d,lo,hi,p
+"trainpod7 - full training, same seed",20260807,"POD 7, mean through POD 7",132,8,-0.1986,-0.3413,-0.0691,0.0026
+"trainpod7 - full training, same seed",20260807,"all photographs, patient mean",171,13,-0.1568,-0.3171,0.0206,0.0776
+"trainpredx - full training, same seed",20260807,"POD 7, mean through POD 7",132,8,-0.0181,-0.1783,0.1265,0.8578
+"trainpredx - full training, same seed",20260807,"all photographs, patient mean",171,13,-0.0492,-0.1838,0.0823,0.4597
+"trainpod7 - full training, same seed",42,"POD 7, mean through POD 7",132,8,0.0091,-0.1697,0.2228,0.9635
+"trainpod7 - full training, same seed",42,"all photographs, patient mean",171,13,0.0594,-0.0769,0.195,0.379
+"trainpredx - full training, same seed",42,"POD 7, mean through POD 7",132,8,-0.0171,-0.1786,0.1443,0.8315
+"trainpredx - full training, same seed",42,"all photographs, patient mean",171,13,0.0156,-0.0641,0.0977,0.7286
+"trainpod7 - full training, same seed",7,"POD 7, mean through POD 7",132,8,-0.0091,-0.0859,0.0731,0.8028
+"trainpod7 - full training, same seed",7,"all photographs, patient mean",171,13,-0.0156,-0.1015,0.0794,0.6918
+"trainpredx - full training, same seed",7,"POD 7, mean through POD 7",132,8,-0.0272,-0.1429,0.0913,0.6391
+"trainpredx - full training, same seed",7,"all photographs, patient mean",171,13,0.0497,-0.072,0.1981,0.5032

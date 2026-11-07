@@ -1,5 +1,13 @@
 contrast,variant,seed,estimand,n_pts,n_events,d,lo,hi,p
 prelandmark_trainpod7_resnet18_seed20260807 - primary,trainpod7,20260807,"POD 7, mean through POD 7",132,8,-0.1986,-0.3413,-0.0691,0.0026
 prelandmark_trainpod7_resnet18_seed20260807 - primary,trainpod7,20260807,"all photographs, patient mean",171,13,-0.1568,-0.3171,0.0206,0.0776
+prelandmark_trainpod7_resnet18_seed42 - primary,trainpod7,42,"POD 7, mean through POD 7",132,8,-0.0504,-0.2352,0.1502,0.6005
+prelandmark_trainpod7_resnet18_seed42 - primary,trainpod7,42,"all photographs, patient mean",171,13,-0.001,-0.1477,0.1468,0.9926
+prelandmark_trainpod7_resnet18_seed7 - primary,trainpod7,7,"POD 7, mean through POD 7",132,8,-0.0161,-0.105,0.0787,0.72
+prelandmark_trainpod7_resnet18_seed7 - primary,trainpod7,7,"all photographs, patient mean",171,13,-0.0682,-0.1174,-0.0254,0.0017
 prelandmark_trainpredx_resnet18_seed20260807 - primary,trainpredx,20260807,"POD 7, mean through POD 7",132,8,-0.0181,-0.1783,0.1265,0.8578
 prelandmark_trainpredx_resnet18_seed20260807 - primary,trainpredx,20260807,"all photographs, patient mean",171,13,-0.0492,-0.1838,0.0823,0.4597
+prelandmark_trainpredx_resnet18_seed42 - primary,trainpredx,42,"POD 7, mean through POD 7",132,8,-0.0766,-0.1603,0.0094,0.0806
+prelandmark_trainpredx_resnet18_seed42 - primary,trainpredx,42,"all photographs, patient mean",171,13,-0.0448,-0.1134,0.0233,0.1868
+prelandmark_trainpredx_resnet18_seed7 - primary,trainpredx,7,"POD 7, mean through POD 7",132,8,-0.0343,-0.1383,0.0835,0.5189
+prelandmark_trainpredx_resnet18_seed7 - primary,trainpredx,7,"all photographs, patient mean",171,13,-0.0029,-0.0982,0.1193,0.8857

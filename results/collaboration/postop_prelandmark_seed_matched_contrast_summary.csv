@@ -1,0 +1,5 @@
+contrast,estimand,n_seeds,mean_d,sd_d
+"trainpod7 - full training, same seed","POD 7, mean through POD 7",3,-0.0662,0.115
+"trainpod7 - full training, same seed","all photographs, patient mean",3,-0.0377,0.1098
+"trainpredx - full training, same seed","POD 7, mean through POD 7",3,-0.0208,0.0056
+"trainpredx - full training, same seed","all photographs, patient mean",3,0.0054,0.0502

@@ -1,5 +1,5 @@
 variant,estimand,n_seeds,mean,sd
-trainpod7,"POD 7, mean through POD 7",1,0.506,
-trainpod7,"all photographs, patient mean",1,0.6164,
-trainpredx,"POD 7, mean through POD 7",1,0.6865,
-trainpredx,"all photographs, patient mean",1,0.724,
+trainpod7,"POD 7, mean through POD 7",3,0.6162333333333333,0.09699310972091431
+trainpod7,"all photographs, patient mean",3,0.6978666666666666,0.07814456688301076
+trainpredx,"POD 7, mean through POD 7",3,0.6616333333333334,0.03021925434773885
+trainpredx,"all photographs, patient mean",3,0.7408333333333333,0.02552299616685575

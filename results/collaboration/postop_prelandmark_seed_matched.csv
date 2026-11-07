@@ -1,0 +1,19 @@
+training,seed,estimand,n_pts,n_events,auroc,auprc
+all postoperative photographs,20260807,"POD 7, mean through POD 7",132,8,0.7046,0.3765
+all postoperative photographs,20260807,"all photographs, patient mean",171,13,0.7731,0.3077
+trainpod7,20260807,"POD 7, mean through POD 7",132,8,0.506,0.0755
+trainpod7,20260807,"all photographs, patient mean",171,13,0.6164,0.1174
+trainpredx,20260807,"POD 7, mean through POD 7",132,8,0.6865,0.1193
+trainpredx,20260807,"all photographs, patient mean",171,13,0.724,0.2078
+all postoperative photographs,42,"POD 7, mean through POD 7",132,8,0.6452,0.1645
+all postoperative photographs,42,"all photographs, patient mean",171,13,0.7128,0.2331
+trainpod7,42,"POD 7, mean through POD 7",132,8,0.6542,0.1028
+trainpod7,42,"all photographs, patient mean",171,13,0.7722,0.2479
+trainpredx,42,"POD 7, mean through POD 7",132,8,0.628,0.1545
+trainpredx,42,"all photographs, patient mean",171,13,0.7283,0.2342
+all postoperative photographs,7,"POD 7, mean through POD 7",132,8,0.6976,0.3156
+all postoperative photographs,7,"all photographs, patient mean",171,13,0.7205,0.2939
+trainpod7,7,"POD 7, mean through POD 7",132,8,0.6885,0.224
+trainpod7,7,"all photographs, patient mean",171,13,0.705,0.2809
+trainpredx,7,"POD 7, mean through POD 7",132,8,0.6704,0.1492
+trainpredx,7,"all photographs, patient mean",171,13,0.7702,0.1956

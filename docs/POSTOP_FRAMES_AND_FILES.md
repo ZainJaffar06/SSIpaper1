@@ -61,6 +61,7 @@ final labels is `SHARED_fold_map_v2.csv`.
 | Old-to-new number map used while editing | - | `postop_renumber_map.csv` |
 | Pre-landmark training (requested 2026-11-06, not in the manuscript): ResNet18 x 3 seeds trained on photographs through POD 7 only (`trainpod7`) or on pre-diagnosis photographs only (`trainpredx`) | postoperative frame, evaluated on the POD-7 risk set and on all photographs | `postop_prelandmark_training_sets.csv` (training-set sizes per fold), `postop_prelandmark_training.csv` and `postop_prelandmark_training_contrasts.csv` (each run vs the primary), `postop_prelandmark_seed_matched*.csv` (each run vs the full-training ResNet18 of the same seed, with three-seed summaries); networks `results/postop_models/prelandmark_{trainpod7,trainpredx}_resnet18_seed{20260807,42,7}.csv`; scripts `retrain_prelandmark_postop.py`, `prelandmark_eval.py`, `prelandmark_seed_matched.py` |
 | Tracker patients without an outcome label (74) | outside every frame | `postop_unlabelled_tracker_patients.csv` |
+| Patients with postoperative smartphone photographs on AWS that are in neither the locked cohort nor the 74 (28; Mahdi Babaei's cohort-lock audit, 2026-11-08): why each is missing, local copies, what is needed to add them | outside every frame | `postop_missing_phone_photo_patients_2026-11-08.csv` |
 
 Files that must not be used for any number: `rgb_intraoperative_scores.csv`,
 `rgb_intraoperative_summary.csv`, `results/canonical/`, and the `y_true` column of

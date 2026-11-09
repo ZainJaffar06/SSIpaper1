@@ -1,0 +1,29 @@
+study_id,ssi,mahdi_already_checked,mahdi_postop_count,mahdi_all_phone_count,phone_photos_unique,postop_by_filename,app_label_only_pod_unverified,intraop_pre_post,day0_by_filename,already_in_tracker,already_breakdown,never_checked,modality_unclear,photos_to_check,with_local_copy
+RU-A1004,No,Never: check all photos,4,12,8,4,4,0,0,0,,8,0,8,0
+RU-A1010,No,Never: check all photos,4,5,1,0,1,0,0,0,,1,0,1,0
+RU-A1015,No,Never: check all photos,4,8,4,0,4,0,0,0,,4,0,4,0
+RU-A1093,No,Never: check all photos,8,19,17,0,17,0,0,0,,17,0,17,0
+RU-A1102,No,Never: check all photos,10,16,16,2,14,0,0,0,,16,0,16,0
+RU-A1104,Yes,Never: check all photos,8,14,14,0,14,0,0,0,,14,0,14,14
+RU-A1121,No,Never: check all photos,6,12,12,0,12,0,0,0,,12,0,12,0
+RU-A1188,No,Never: check all photos,12,16,16,2,10,4,0,0,,16,0,16,0
+RU-A1189,No,Never: check all photos,6,12,12,2,6,4,0,0,,12,0,12,0
+RU-A1190,No,Never: check all photos,14,18,18,8,6,4,0,0,,18,0,18,0
+RU-A1191,No,Never: check all photos,16,22,21,3,14,4,0,0,,21,0,21,0
+RU-A1192,No,Never: check all photos,24,30,30,10,16,4,0,0,,30,0,30,0
+RU-A1193,No,Never: check all photos,20,26,26,4,18,4,0,0,,26,0,26,0
+RU-A1194,No,Never: check all photos,14,20,20,8,8,4,0,0,,20,0,20,20
+RU-A1196,No,Never: check all photos,46,52,52,6,46,0,0,0,,52,0,52,0
+RU-A1197,No,Never: check all photos,26,32,31,16,11,4,0,0,,31,0,31,31
+RU-A1198,No,Never: check all photos,16,22,22,10,8,4,0,0,,22,0,22,22
+RU-A1199,No,Never: check all photos,12,18,18,2,14,2,0,0,,18,0,18,0
+RU-A1200,No,Never: check all photos,12,18,18,4,14,0,0,0,,18,0,18,0
+RU-A1247,No,Never: check all photos,8,15,15,0,15,0,0,0,,15,0,15,0
+RU-A1253,No,Never: check all photos,26,28,28,23,3,0,2,25,"checked, excluded by annotator: no reason recorded: 25",3,0,3,0
+RU-A1285,No,Never: check all photos,2,2,2,2,0,0,0,0,,2,0,2,0
+RU-A1036,No,Partly: check only photos without a tracker row,60,98,42,28,9,5,0,33,"checked, excluded by annotator: bandage/dressing covering the incision: 22; checked, excluded by annotator: file would not open: 9; checked, COMPLETE but quality flag (fails gate): 2",9,0,9,0
+RU-A1108,Yes,Partly: check only photos without a tracker row,37,40,40,6,34,0,0,6,"checked, excluded by annotator: bandage/dressing covering the incision: 4; checked, COMPLETE but quality flag (fails gate): 2",34,0,34,34
+RU-A1163,Yes,Partly: check only photos without a tracker row,22,29,32,18,0,14,0,30,"checked, excluded by annotator: bandage/dressing covering the incision: 22; checked, excluded by annotator: file would not open: 8",2,0,2,0
+RU-A1178,No,Partly: check only photos without a tracker row,24,30,30,10,16,4,0,10,"checked, excluded by annotator: bandage/dressing covering the incision: 6; checked, excluded by annotator: file would not open: 4",20,0,20,0
+RU-A1184,No,Partly: check only photos without a tracker row,12,18,17,9,4,4,0,5,"checked, excluded by annotator: file would not open: 4; checked, excluded by annotator: bandage/dressing covering the incision: 1",12,0,12,0
+RU-A1256,No,Partly: check only photos without a tracker row,17,23,23,17,0,4,2,23,"checked, excluded by annotator: no reason recorded: 23",0,0,0,0
